@@ -62,15 +62,12 @@ namespace Hotel_Management
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    //LoginForm loginForm = new LoginForm();
-                    // loginForm.Hide();
                     this.Hide();
                     HomeForm homeForm = new HomeForm();
                     homeForm.username = textBoxUsername.Text;
                     textBoxUsername.Clear();
                     textBoxPassword.Clear();
                     homeForm.Show();
-                    
                 }
                 else
                 {

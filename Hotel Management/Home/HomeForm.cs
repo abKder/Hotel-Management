@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel_Management.User_Control;
+
 namespace Hotel_Management
 {
     public partial class HomeForm : Form
@@ -41,28 +42,42 @@ namespace Hotel_Management
         {
             timer1.Start();
             labelUsername.Text = username;
-           //labelUsername.Text = username;
-
         }
 
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
             MovePanel(buttonDashboard);
+            panel6.Controls.Clear();
+            UserControlDashboard userControlDashboard = new UserControlDashboard();
+            userControlDashboard.Dock = DockStyle.Fill;
+            panel6.Controls.Add(userControlDashboard);
         }
 
         private void buttonClient_Click(object sender, EventArgs e)
         {
             MovePanel(buttonClient);
+            panel6.Controls.Clear();
+            UserControlClient userControlClient = new UserControlClient();
+            userControlClient.Dock = DockStyle.Fill;
+            panel6.Controls.Add(userControlClient);
         }
 
         private void buttonRoom_Click(object sender, EventArgs e)
         {
             MovePanel(buttonRoom);
+            panel6.Controls.Clear();
+            UserControlRoom userControlRoom = new UserControlRoom();
+            userControlRoom.Dock = DockStyle.Fill;
+            panel6.Controls.Add(userControlRoom);
         }
 
         private void buttonReservation_Click(object sender, EventArgs e)
         {
             MovePanel(buttonReservation);
+            panel6.Controls.Clear();
+            UserControlReservation userControlReservation = new UserControlReservation();
+           userControlReservation.Dock = DockStyle.Fill;
+            panel6.Controls.Add(userControlReservation);
         }
 
         private void buttonSetting_Click(object sender, EventArgs e)
