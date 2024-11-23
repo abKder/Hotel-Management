@@ -57,8 +57,8 @@ namespace Hotel_Management
         {
             MovePanel(buttonClient);
             panel6.Controls.Clear();
-            UserControlClient userControlClient = new UserControlClient();
-            userControlClient.Dock = DockStyle.Fill;
+           //// UserControlClient userControlClient = new UserControlClient();
+           // userControlClient.Dock = DockStyle.Fill;
             panel6.Controls.Add(userControlClient);
         }
 
