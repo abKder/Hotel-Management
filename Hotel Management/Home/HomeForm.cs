@@ -41,7 +41,6 @@ namespace Hotel_Management
         private void HomeForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            labelUsername.Text = username;
         }
 
         private void buttonDashboard_Click(object sender, EventArgs e)
@@ -57,9 +56,9 @@ namespace Hotel_Management
         {
             MovePanel(buttonClient);
             panel6.Controls.Clear();
-           //// UserControlClient userControlClient = new UserControlClient();
-           // userControlClient.Dock = DockStyle.Fill;
-            panel6.Controls.Add(userControlClient);
+            UserControlClient1 userControlClient1 = new UserControlClient1();
+            userControlClient1.Dock = DockStyle.Fill;
+            panel6.Controls.Add(userControlClient1);
         }
 
         private void buttonRoom_Click(object sender, EventArgs e)

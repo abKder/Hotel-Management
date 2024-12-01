@@ -36,7 +36,6 @@
             this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.labelUsername = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSlide = new System.Windows.Forms.Panel();
@@ -146,25 +145,12 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.panel5.Controls.Add(this.labelUsername);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 98);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(915, 59);
             this.panel5.TabIndex = 0;
-            // 
-            // labelUsername
-            // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
-            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.ForeColor = System.Drawing.Color.Black;
-            this.labelUsername.Location = new System.Drawing.Point(126, 19);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(15, 16);
-            this.labelUsername.TabIndex = 2;
-            this.labelUsername.Text = "?";
             // 
             // label3
             // 
@@ -173,9 +159,9 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(16, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 24);
+            this.label3.Size = new System.Drawing.Size(225, 24);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Welcome:";
+            this.label3.Text = "Welcome To Hotel MIZ";
             // 
             // panel1
             // 
@@ -202,7 +188,7 @@
             // panelSlide
             // 
             this.panelSlide.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelSlide.BackColor = System.Drawing.Color.White;
+            this.panelSlide.BackColor = System.Drawing.Color.Black;
             this.panelSlide.Location = new System.Drawing.Point(0, 217);
             this.panelSlide.Name = "panelSlide";
             this.panelSlide.Size = new System.Drawing.Size(10, 54);
@@ -211,7 +197,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox7.Image = global::Hotel_Management.Properties.Resources.setting_icon;
+            this.pictureBox7.Image = global::Hotel_Management.Properties.Resources.setting_icon2;
             this.pictureBox7.Location = new System.Drawing.Point(12, 461);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 55);
@@ -237,7 +223,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox6.Image = global::Hotel_Management.Properties.Resources.reservation_icon1;
+            this.pictureBox6.Image = global::Hotel_Management.Properties.Resources.reservation_icon3;
             this.pictureBox6.Location = new System.Drawing.Point(12, 400);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 55);
@@ -263,7 +249,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = global::Hotel_Management.Properties.Resources.room_icon;
+            this.pictureBox5.Image = global::Hotel_Management.Properties.Resources.Room_icon3;
             this.pictureBox5.Location = new System.Drawing.Point(12, 339);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 55);
@@ -289,7 +275,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.Image = global::Hotel_Management.Properties.Resources.client_icon;
+            this.pictureBox4.Image = global::Hotel_Management.Properties.Resources.client_icon4;
             this.pictureBox4.Location = new System.Drawing.Point(12, 278);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 55);
@@ -315,7 +301,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = global::Hotel_Management.Properties.Resources.dashboard_icone2;
+            this.pictureBox3.Image = global::Hotel_Management.Properties.Resources.dashboard_icon2;
             this.pictureBox3.Location = new System.Drawing.Point(12, 217);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 55);
@@ -440,7 +426,6 @@
         private System.Windows.Forms.Button buttonDashboard;
         private System.Windows.Forms.Label labelDateTime;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button buttonSetting;
