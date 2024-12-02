@@ -77,6 +77,11 @@ namespace Hotel_Management
             }
         }
 
-       
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormFrontPage formFrontPage = new FormFrontPage();
+            formFrontPage.Show();
+        }
     }
 }

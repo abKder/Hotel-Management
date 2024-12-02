@@ -30,7 +30,9 @@ namespace Hotel_Management
             if (DialogResult.Yes == result)
             {
                 timer1.Stop();
-                this.Close();
+                this.Hide();
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
             }
         }
 

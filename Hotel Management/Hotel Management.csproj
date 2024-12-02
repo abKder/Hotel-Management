@@ -299,5 +299,29 @@
   <ItemGroup>
     <None Include="Resources\setting_icon2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-house-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client icon1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client icon11.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client icon2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client icon3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client icon4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client-icon5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
