@@ -127,6 +127,7 @@
             this.textBoxAdminPassword.Name = "textBoxAdminPassword";
             this.textBoxAdminPassword.Size = new System.Drawing.Size(256, 29);
             this.textBoxAdminPassword.TabIndex = 2;
+            this.textBoxAdminPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 

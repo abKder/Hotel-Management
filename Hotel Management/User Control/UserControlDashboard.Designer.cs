@@ -62,7 +62,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(173, 38);
+            this.label4.Location = new System.Drawing.Point(158, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 22);
             this.label4.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 38);
+            this.label1.Location = new System.Drawing.Point(99, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 22);
             this.label1.TabIndex = 1;
@@ -113,7 +113,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 38);
+            this.label2.Location = new System.Drawing.Point(89, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 22);
             this.label2.TabIndex = 0;
@@ -127,14 +127,14 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(293, 237);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(303, 124);
+            this.panel3.Size = new System.Drawing.Size(303, 109);
             this.panel3.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 53);
+            this.label3.Location = new System.Drawing.Point(99, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 1;

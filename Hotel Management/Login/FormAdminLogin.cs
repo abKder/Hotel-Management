@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Hotel_Management.AdminHomePage;
 
 namespace Hotel_Management
 {
@@ -53,11 +54,11 @@ namespace Hotel_Management
                 if (reader.HasRows)
                 {
                     this.Hide();
-                    HomeForm homeForm = new HomeForm();
-                    homeForm.username = textBoxAdminName.Text;
+                    FormAdminHomePage formAdminHomePage = new FormAdminHomePage();
+                   // formAdminHomePage.Admin_Username = textBoxAdminName.Text;
                     textBoxAdminName.Clear();
                     textBoxAdminPassword.Clear();
-                    homeForm.Show();
+                    formAdminHomePage.Show();
                 }
                 else
                 {

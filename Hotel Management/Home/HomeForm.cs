@@ -18,12 +18,6 @@ namespace Hotel_Management
         {
             InitializeComponent();
         }
-        private void MovePanel(Control btn)
-        {
-            panelSlide.Top = btn.Top;
-            panelSlide.Height = btn.Height;
-        }
-
         private void linkLabelLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
            DialogResult result = MessageBox.Show("Are you want to Log Out?","Log Out",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -47,7 +41,6 @@ namespace Hotel_Management
 
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
-            MovePanel(buttonDashboard);
             panel6.Controls.Clear();
             UserControlDashboard userControlDashboard = new UserControlDashboard();
             userControlDashboard.Dock = DockStyle.Fill;
@@ -56,7 +49,6 @@ namespace Hotel_Management
 
         private void buttonClient_Click(object sender, EventArgs e)
         {
-            MovePanel(buttonClient);
             panel6.Controls.Clear();
             UserControlClient1 userControlClient1 = new UserControlClient1();
             userControlClient1.Dock = DockStyle.Fill;
@@ -65,7 +57,6 @@ namespace Hotel_Management
 
         private void buttonRoom_Click(object sender, EventArgs e)
         {
-            MovePanel(buttonRoom);
             panel6.Controls.Clear();
             UserControlRoom userControlRoom = new UserControlRoom();
             userControlRoom.Dock = DockStyle.Fill;
@@ -74,7 +65,6 @@ namespace Hotel_Management
 
         private void buttonReservation_Click(object sender, EventArgs e)
         {
-            MovePanel(buttonReservation);
             panel6.Controls.Clear();
             UserControlReservation userControlReservation = new UserControlReservation();
            userControlReservation.Dock = DockStyle.Fill;
@@ -83,14 +73,11 @@ namespace Hotel_Management
 
         private void buttonSetting_Click(object sender, EventArgs e)
         {
-            MovePanel(buttonSetting);
             panel6.Controls.Clear();
             UserControlSetting userControlSetting = new UserControlSetting();
             userControlSetting.Dock = DockStyle.Fill;
             panel6.Controls.Add(userControlSetting);
 
         }
-
-
     }
 }

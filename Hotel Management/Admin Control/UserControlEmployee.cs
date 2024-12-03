@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Management.User_Control
+namespace Hotel_Management.Admin_Control
 {
-    public partial class UserControlDashboard : UserControl
+    public partial class UserControlEmployee : UserControl
     {
-        public UserControlDashboard()
+        public UserControlEmployee()
         {
             InitializeComponent();
         }
-
-       
     }
 }

@@ -63,6 +63,16 @@ namespace Hotel_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AdminHomePage {
+            get {
+                object obj = ResourceManager.GetObject("AdminHomePage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AdminPanelPhoto {
             get {
                 object obj = ResourceManager.GetObject("AdminPanelPhoto", resourceCulture);
@@ -105,7 +115,7 @@ namespace Hotel_Management.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap client_icon1 {
             get {
-                object obj = ResourceManager.GetObject("client icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("client-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +283,16 @@ namespace Hotel_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home2 {
+            get {
+                object obj = ResourceManager.GetObject("home2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotel_1 {
             get {
                 object obj = ResourceManager.GetObject("hotel-1", resourceCulture);
@@ -326,6 +346,16 @@ namespace Hotel_Management.Properties {
         internal static System.Drawing.Bitmap profile_icon {
             get {
                 object obj = ResourceManager.GetObject("profile icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("profile icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +456,16 @@ namespace Hotel_Management.Properties {
         internal static System.Drawing.Bitmap User_icon {
             get {
                 object obj = ResourceManager.GetObject("User_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserHomePage {
+            get {
+                object obj = ResourceManager.GetObject("UserHomePage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
