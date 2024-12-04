@@ -186,9 +186,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 31);
+            this.label3.Size = new System.Drawing.Size(361, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome To Hotel MIZ";
+            this.label3.Text = "Welcome To Hotel FLORIDA";
             // 
             // linkLabelLogout
             // 

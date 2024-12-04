@@ -93,11 +93,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(527, 92);
+            this.label1.Location = new System.Drawing.Point(488, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 31);
+            this.label1.Size = new System.Drawing.Size(354, 31);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Welcome to Hotel MIZ";
+            this.label1.Text = "Welcome to Hotel FLORIDA";
             // 
             // FormFrontPage
             // 
