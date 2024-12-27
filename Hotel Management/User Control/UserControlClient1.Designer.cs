@@ -30,47 +30,42 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxClientOut = new System.Windows.Forms.TextBox();
+            this.textBoxClientIn = new System.Windows.Forms.TextBox();
+            this.textBoxClientRoomNo = new System.Windows.Forms.TextBox();
+            this.textBoxClientRoomType = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBoxClientPhone = new System.Windows.Forms.TextBox();
+            this.textBoxClientNID = new System.Windows.Forms.TextBox();
+            this.textBoxClientEmail = new System.Windows.Forms.TextBox();
+            this.textBoxClientName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.client_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_nid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Search = new System.Windows.Forms.Button();
+            this.dataGridViewSearchValue = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxClient_Phone = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.dataGridViewAllClient = new System.Windows.Forms.DataGridView();
+            this.textBoxClient_phoneNo = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchValue)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllClient)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -89,13 +84,19 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.textBoxClientOut);
+            this.tabPage1.Controls.Add(this.textBoxClientIn);
+            this.tabPage1.Controls.Add(this.textBoxClientRoomNo);
+            this.tabPage1.Controls.Add(this.textBoxClientRoomType);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.textBoxClientPhone);
+            this.tabPage1.Controls.Add(this.textBoxClientNID);
+            this.tabPage1.Controls.Add(this.textBoxClientEmail);
+            this.tabPage1.Controls.Add(this.textBoxClientName);
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -109,72 +110,129 @@
             this.tabPage1.Text = "Add Client";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // textBoxClientOut
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(131, 241);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(683, 65);
-            this.textBox5.TabIndex = 11;
+            this.textBoxClientOut.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientOut.Location = new System.Drawing.Point(456, 293);
+            this.textBoxClientOut.Name = "textBoxClientOut";
+            this.textBoxClientOut.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientOut.TabIndex = 24;
             // 
-            // textBox4
+            // textBoxClientIn
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(494, 166);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(320, 29);
-            this.textBox4.TabIndex = 10;
+            this.textBoxClientIn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientIn.Location = new System.Drawing.Point(456, 210);
+            this.textBoxClientIn.Name = "textBoxClientIn";
+            this.textBoxClientIn.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientIn.TabIndex = 23;
             // 
-            // textBox3
+            // textBoxClientRoomNo
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(131, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(325, 29);
-            this.textBox3.TabIndex = 9;
+            this.textBoxClientRoomNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientRoomNo.Location = new System.Drawing.Point(93, 293);
+            this.textBoxClientRoomNo.Name = "textBoxClientRoomNo";
+            this.textBoxClientRoomNo.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientRoomNo.TabIndex = 22;
             // 
-            // textBox2
+            // textBoxClientRoomType
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(494, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 29);
-            this.textBox2.TabIndex = 8;
+            this.textBoxClientRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientRoomType.Location = new System.Drawing.Point(93, 210);
+            this.textBoxClientRoomType.Name = "textBoxClientRoomType";
+            this.textBoxClientRoomType.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientRoomType.TabIndex = 21;
             // 
-            // textBox1
+            // label12
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 29);
-            this.textBox1.TabIndex = 7;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(89, 254);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 24);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Room No:";
             // 
-            // button1
+            // label10
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(131, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(452, 254);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 24);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Out:";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(452, 183);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 24);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "In:";
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(127, 216);
+            this.label6.Location = new System.Drawing.Point(89, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 22);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Address:";
+            this.label6.Size = new System.Drawing.Size(109, 22);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Room Type:";
+            // 
+            // textBoxClientPhone
+            // 
+            this.textBoxClientPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientPhone.Location = new System.Drawing.Point(456, 139);
+            this.textBoxClientPhone.Name = "textBoxClientPhone";
+            this.textBoxClientPhone.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientPhone.TabIndex = 10;
+            // 
+            // textBoxClientNID
+            // 
+            this.textBoxClientNID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientNID.Location = new System.Drawing.Point(93, 139);
+            this.textBoxClientNID.Name = "textBoxClientNID";
+            this.textBoxClientNID.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientNID.TabIndex = 9;
+            // 
+            // textBoxClientEmail
+            // 
+            this.textBoxClientEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientEmail.Location = new System.Drawing.Point(456, 64);
+            this.textBoxClientEmail.Name = "textBoxClientEmail";
+            this.textBoxClientEmail.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientEmail.TabIndex = 8;
+            // 
+            // textBoxClientName
+            // 
+            this.textBoxClientName.Location = new System.Drawing.Point(93, 64);
+            this.textBoxClientName.Name = "textBoxClientName";
+            this.textBoxClientName.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClientName.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(805, 329);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 33);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(490, 141);
+            this.label5.Location = new System.Drawing.Point(452, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 22);
             this.label5.TabIndex = 4;
@@ -184,7 +242,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 141);
+            this.label4.Location = new System.Drawing.Point(89, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 22);
             this.label4.TabIndex = 3;
@@ -194,21 +252,21 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(490, 66);
+            this.label3.Location = new System.Drawing.Point(452, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 22);
+            this.label3.Size = new System.Drawing.Size(85, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Last Name:";
+            this.label3.Text = "Email Id:";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 66);
+            this.label2.Location = new System.Drawing.Point(89, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 22);
+            this.label2.Size = new System.Drawing.Size(63, 22);
             this.label2.TabIndex = 1;
-            this.label2.Text = "First Name:";
+            this.label2.Text = "Name:";
             // 
             // label1
             // 
@@ -222,10 +280,11 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.Search);
+            this.tabPage2.Controls.Add(this.dataGridViewSearchValue);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox6);
+            this.tabPage2.Controls.Add(this.textBoxClient_Phone);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -234,61 +293,29 @@
             this.tabPage2.Text = "Search Details";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // Search
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.client_id,
-            this.client_firstName,
-            this.client_lastName,
-            this.client_nid,
-            this.client_phoneNumber,
-            this.client_address});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 151);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 196);
-            this.dataGridView1.TabIndex = 11;
+            this.Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search.Location = new System.Drawing.Point(156, 107);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(102, 39);
+            this.Search.TabIndex = 12;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // client_id
+            // dataGridViewSearchValue
             // 
-            this.client_id.HeaderText = "ID";
-            this.client_id.Name = "client_id";
-            this.client_id.ReadOnly = true;
-            // 
-            // client_firstName
-            // 
-            this.client_firstName.HeaderText = "First Name";
-            this.client_firstName.Name = "client_firstName";
-            this.client_firstName.ReadOnly = true;
-            // 
-            // client_lastName
-            // 
-            this.client_lastName.HeaderText = "Last Name";
-            this.client_lastName.Name = "client_lastName";
-            this.client_lastName.ReadOnly = true;
-            // 
-            // client_nid
-            // 
-            this.client_nid.HeaderText = "NID No";
-            this.client_nid.Name = "client_nid";
-            this.client_nid.ReadOnly = true;
-            // 
-            // client_phoneNumber
-            // 
-            this.client_phoneNumber.HeaderText = "Phone No";
-            this.client_phoneNumber.Name = "client_phoneNumber";
-            this.client_phoneNumber.ReadOnly = true;
-            // 
-            // client_address
-            // 
-            this.client_address.HeaderText = "Address";
-            this.client_address.Name = "client_address";
-            this.client_address.ReadOnly = true;
+            this.dataGridViewSearchValue.AllowUserToAddRows = false;
+            this.dataGridViewSearchValue.AllowUserToDeleteRows = false;
+            this.dataGridViewSearchValue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewSearchValue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSearchValue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSearchValue.Location = new System.Drawing.Point(6, 163);
+            this.dataGridViewSearchValue.Name = "dataGridViewSearchValue";
+            this.dataGridViewSearchValue.ReadOnly = true;
+            this.dataGridViewSearchValue.Size = new System.Drawing.Size(886, 189);
+            this.dataGridViewSearchValue.TabIndex = 11;
             // 
             // label8
             // 
@@ -304,24 +331,24 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(162, 61);
+            this.label7.Location = new System.Drawing.Point(152, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 22);
             this.label7.TabIndex = 9;
             this.label7.Text = "Phone No:";
             // 
-            // textBox6
+            // textBoxClient_Phone
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(166, 98);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(299, 29);
-            this.textBox6.TabIndex = 8;
+            this.textBoxClient_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClient_Phone.Location = new System.Drawing.Point(156, 72);
+            this.textBoxClient_Phone.Name = "textBoxClient_Phone";
+            this.textBoxClient_Phone.Size = new System.Drawing.Size(299, 29);
+            this.textBoxClient_Phone.TabIndex = 8;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Controls.Add(this.textBox10);
+            this.tabPage3.Controls.Add(this.dataGridViewAllClient);
+            this.tabPage3.Controls.Add(this.textBoxClient_phoneNo);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.label9);
@@ -332,87 +359,46 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Delete Client";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // dataGridView2
+            // dataGridViewAllClient
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView2.Location = new System.Drawing.Point(19, 166);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(856, 196);
-            this.dataGridView2.TabIndex = 13;
+            this.dataGridViewAllClient.AllowUserToAddRows = false;
+            this.dataGridViewAllClient.AllowUserToDeleteRows = false;
+            this.dataGridViewAllClient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAllClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAllClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllClient.Location = new System.Drawing.Point(6, 155);
+            this.dataGridViewAllClient.Name = "dataGridViewAllClient";
+            this.dataGridViewAllClient.ReadOnly = true;
+            this.dataGridViewAllClient.Size = new System.Drawing.Size(886, 196);
+            this.dataGridViewAllClient.TabIndex = 13;
             // 
-            // dataGridViewTextBoxColumn1
+            // textBoxClient_phoneNo
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "NID No";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Phone No";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox10.Location = new System.Drawing.Point(173, 81);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(325, 29);
-            this.textBox10.TabIndex = 12;
+            this.textBoxClient_phoneNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClient_phoneNo.Location = new System.Drawing.Point(147, 66);
+            this.textBoxClient_phoneNo.Name = "textBoxClient_phoneNo";
+            this.textBoxClient_phoneNo.Size = new System.Drawing.Size(325, 29);
+            this.textBoxClient_phoneNo.TabIndex = 12;
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(173, 116);
+            this.button3.Location = new System.Drawing.Point(147, 110);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(78, 33);
             this.button3.TabIndex = 8;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(169, 56);
+            this.label13.Location = new System.Drawing.Point(143, 41);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(95, 22);
             this.label13.TabIndex = 5;
@@ -441,10 +427,10 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchValue)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllClient)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,39 +440,34 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxClientPhone;
+        private System.Windows.Forms.TextBox textBoxClientNID;
+        private System.Windows.Forms.TextBox textBoxClientEmail;
+        private System.Windows.Forms.TextBox textBoxClientName;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_nid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_phoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_address;
+        private System.Windows.Forms.DataGridView dataGridViewSearchValue;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxClient_Phone;
+        private System.Windows.Forms.TextBox textBoxClient_phoneNo;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.DataGridView dataGridViewAllClient;
+        private System.Windows.Forms.TextBox textBoxClientOut;
+        private System.Windows.Forms.TextBox textBoxClientIn;
+        private System.Windows.Forms.TextBox textBoxClientRoomNo;
+        private System.Windows.Forms.TextBox textBoxClientRoomType;
     }
 }

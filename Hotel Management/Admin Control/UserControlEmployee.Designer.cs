@@ -32,7 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.buttonEmployeeAdd = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxEmployeeEmailID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,41 +43,32 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmployeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmployeGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmployeEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmployeePhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmployeeNID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewEmployeeSearch = new System.Windows.Forms.DataGridView();
             this.textBoxEmployeePhnoneNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewAllEmployee = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
             this.textBoxEmployeePhone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.textBoxEmployeGender = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployeeSearch)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -91,8 +81,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBoxEmployeGender);
             this.tabPage1.Controls.Add(this.buttonEmployeeAdd);
-            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.textBoxEmployeeEmailID);
             this.tabPage1.Controls.Add(this.label5);
@@ -115,20 +105,13 @@
             // buttonEmployeeAdd
             // 
             this.buttonEmployeeAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEmployeeAdd.Location = new System.Drawing.Point(180, 331);
+            this.buttonEmployeeAdd.Location = new System.Drawing.Point(870, 378);
             this.buttonEmployeeAdd.Name = "buttonEmployeeAdd";
             this.buttonEmployeeAdd.Size = new System.Drawing.Size(81, 38);
             this.buttonEmployeeAdd.TabIndex = 11;
             this.buttonEmployeeAdd.Text = "Add";
             this.buttonEmployeeAdd.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(180, 280);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 32);
-            this.comboBox1.TabIndex = 10;
+            this.buttonEmployeeAdd.Click += new System.EventHandler(this.buttonEmployeeAdd_Click);
             // 
             // label6
             // 
@@ -224,7 +207,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.dataGridViewEmployeeSearch);
             this.tabPage2.Controls.Add(this.textBoxEmployeePhnoneNo);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
@@ -237,66 +221,23 @@
             this.tabPage2.Text = "Employee Details";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewEmployeeSearch
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EmployeeID,
-            this.EmployeeName,
-            this.EmployeGender,
-            this.EmployeEmail,
-            this.EmployeePhoneNo,
-            this.EmployeeNID});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(959, 233);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // EmployeeID
-            // 
-            this.EmployeeID.HeaderText = "ID";
-            this.EmployeeID.Name = "EmployeeID";
-            this.EmployeeID.ReadOnly = true;
-            // 
-            // EmployeeName
-            // 
-            this.EmployeeName.HeaderText = "Name";
-            this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.ReadOnly = true;
-            // 
-            // EmployeGender
-            // 
-            this.EmployeGender.HeaderText = "Gender";
-            this.EmployeGender.Name = "EmployeGender";
-            this.EmployeGender.ReadOnly = true;
-            // 
-            // EmployeEmail
-            // 
-            this.EmployeEmail.HeaderText = "Email ID";
-            this.EmployeEmail.Name = "EmployeEmail";
-            this.EmployeEmail.ReadOnly = true;
-            // 
-            // EmployeePhoneNo
-            // 
-            this.EmployeePhoneNo.HeaderText = "Phone No";
-            this.EmployeePhoneNo.Name = "EmployeePhoneNo";
-            this.EmployeePhoneNo.ReadOnly = true;
-            // 
-            // EmployeeNID
-            // 
-            this.EmployeeNID.HeaderText = "NID No";
-            this.EmployeeNID.Name = "EmployeeNID";
-            this.EmployeeNID.ReadOnly = true;
+            this.dataGridViewEmployeeSearch.AllowUserToAddRows = false;
+            this.dataGridViewEmployeeSearch.AllowUserToDeleteRows = false;
+            this.dataGridViewEmployeeSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewEmployeeSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEmployeeSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmployeeSearch.Location = new System.Drawing.Point(10, 185);
+            this.dataGridViewEmployeeSearch.Name = "dataGridViewEmployeeSearch";
+            this.dataGridViewEmployeeSearch.ReadOnly = true;
+            this.dataGridViewEmployeeSearch.Size = new System.Drawing.Size(959, 233);
+            this.dataGridViewEmployeeSearch.TabIndex = 3;
             // 
             // textBoxEmployeePhnoneNo
             // 
             this.textBoxEmployeePhnoneNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEmployeePhnoneNo.Location = new System.Drawing.Point(214, 117);
+            this.textBoxEmployeePhnoneNo.Location = new System.Drawing.Point(191, 84);
             this.textBoxEmployeePhnoneNo.Name = "textBoxEmployeePhnoneNo";
             this.textBoxEmployeePhnoneNo.Size = new System.Drawing.Size(258, 32);
             this.textBoxEmployeePhnoneNo.TabIndex = 2;
@@ -304,7 +245,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(210, 89);
+            this.label8.Location = new System.Drawing.Point(187, 56);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 24);
             this.label8.TabIndex = 1;
@@ -323,9 +264,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.dataGridViewAllEmployee);
             this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.buttonDeleteEmployee);
             this.tabPage3.Controls.Add(this.textBoxEmployeePhone);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.label9);
@@ -337,62 +278,20 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Employee Delete";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // dataGridView2
+            // dataGridViewAllEmployee
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView2.Location = new System.Drawing.Point(10, 191);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(959, 233);
-            this.dataGridView2.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Gender";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Email ID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Phone No";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "NID No";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewAllEmployee.AllowUserToAddRows = false;
+            this.dataGridViewAllEmployee.AllowUserToDeleteRows = false;
+            this.dataGridViewAllEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAllEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAllEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllEmployee.Location = new System.Drawing.Point(10, 191);
+            this.dataGridViewAllEmployee.Name = "dataGridViewAllEmployee";
+            this.dataGridViewAllEmployee.ReadOnly = true;
+            this.dataGridViewAllEmployee.Size = new System.Drawing.Size(959, 233);
+            this.dataGridViewAllEmployee.TabIndex = 5;
             // 
             // button2
             // 
@@ -403,15 +302,16 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonDeleteEmployee
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(216, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 39);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDeleteEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteEmployee.Location = new System.Drawing.Point(216, 131);
+            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            this.buttonDeleteEmployee.Size = new System.Drawing.Size(93, 39);
+            this.buttonDeleteEmployee.TabIndex = 3;
+            this.buttonDeleteEmployee.Text = "Delete";
+            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
             // 
             // textBoxEmployeePhone
             // 
@@ -445,6 +345,26 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // textBoxEmployeGender
+            // 
+            this.textBoxEmployeGender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEmployeGender.Location = new System.Drawing.Point(180, 280);
+            this.textBoxEmployeGender.Name = "textBoxEmployeGender";
+            this.textBoxEmployeGender.Size = new System.Drawing.Size(330, 32);
+            this.textBoxEmployeGender.TabIndex = 12;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(191, 122);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(93, 39);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // UserControlEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,10 +378,10 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployeeSearch)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllEmployee)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,29 +403,18 @@
         private System.Windows.Forms.TextBox textBoxEmployeeNIDNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonEmployeeAdd;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewEmployeeSearch;
         private System.Windows.Forms.TextBox textBoxEmployeePhnoneNo;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeGender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeePhoneNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeNID;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView dataGridViewAllEmployee;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDeleteEmployee;
         private System.Windows.Forms.TextBox textBoxEmployeePhone;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxEmployeGender;
+        private System.Windows.Forms.Button button3;
     }
 }

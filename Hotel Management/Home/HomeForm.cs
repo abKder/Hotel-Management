@@ -55,13 +55,7 @@ namespace Hotel_Management
             panel6.Controls.Add(userControlClient1);
         }
 
-        private void buttonRoom_Click(object sender, EventArgs e)
-        {
-            panel6.Controls.Clear();
-            UserControlRoom userControlRoom = new UserControlRoom();
-            userControlRoom.Dock = DockStyle.Fill;
-            panel6.Controls.Add(userControlRoom);
-        }
+      
 
         private void buttonReservation_Click(object sender, EventArgs e)
         {

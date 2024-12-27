@@ -67,7 +67,7 @@
             this.groupBox1.Controls.Add(this.pictureBoxHide);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(157, 82);
+            this.groupBox1.Location = new System.Drawing.Point(205, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(356, 328);
             this.groupBox1.TabIndex = 0;
@@ -161,7 +161,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(563, 32);
+            this.panel1.Location = new System.Drawing.Point(611, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 440);
             this.panel1.TabIndex = 1;
@@ -173,7 +173,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(762, 368);
+            this.label4.Location = new System.Drawing.Point(810, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(196, 27);
             this.label4.TabIndex = 3;
@@ -185,7 +185,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(828, 408);
+            this.label5.Location = new System.Drawing.Point(876, 401);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 27);
             this.label5.TabIndex = 4;
@@ -196,9 +196,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 572);
+            this.panel2.Location = new System.Drawing.Point(0, 559);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1195, 62);
+            this.panel2.Size = new System.Drawing.Size(1291, 62);
             this.panel2.TabIndex = 5;
             // 
             // label6
@@ -207,7 +207,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(303, 18);
+            this.label6.Location = new System.Drawing.Point(351, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(479, 21);
             this.label6.TabIndex = 0;
@@ -217,7 +217,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Hotel_Management.Properties.Resources.reception_image;
-            this.pictureBox1.Location = new System.Drawing.Point(673, 100);
+            this.pictureBox1.Location = new System.Drawing.Point(721, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(378, 284);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -229,7 +229,7 @@
             this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBack.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(23, 18);
+            this.buttonBack.Location = new System.Drawing.Point(12, 25);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(82, 37);
             this.buttonBack.TabIndex = 6;
@@ -244,7 +244,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Hotel_Management.Properties.Resources.hotel_pic1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1195, 634);
+            this.ClientSize = new System.Drawing.Size(1291, 621);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);

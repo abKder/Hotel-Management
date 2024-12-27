@@ -30,52 +30,33 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridViewAllClient = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxClientPhoneNo = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.client_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_nid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridViewAdminSearch = new System.Windows.Forms.DataGridView();
+            this.Search = new System.Windows.Forms.Button();
+            this.textBoxAdminClientPhone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridViewAdminAllClient = new System.Windows.Forms.DataGridView();
+            this.buttonAdminDelete = new System.Windows.Forms.Button();
+            this.textBoxAdminClient_Phone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllClient)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminSearch)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminAllClient)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -88,10 +69,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBoxClientPhoneNo);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.dataGridViewAllClient);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
@@ -99,13 +77,38 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(969, 433);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Approv Client";
+            this.tabPage1.Text = "All Client";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // dataGridViewAllClient
+            // 
+            this.dataGridViewAllClient.AllowUserToAddRows = false;
+            this.dataGridViewAllClient.AllowUserToDeleteRows = false;
+            this.dataGridViewAllClient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAllClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAllClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllClient.Location = new System.Drawing.Point(6, 64);
+            this.dataGridViewAllClient.Name = "dataGridViewAllClient";
+            this.dataGridViewAllClient.ReadOnly = true;
+            this.dataGridViewAllClient.Size = new System.Drawing.Size(957, 363);
+            this.dataGridViewAllClient.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "All Client:";
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.dataGridViewAdminSearch);
+            this.tabPage2.Controls.Add(this.Search);
+            this.tabPage2.Controls.Add(this.textBoxAdminClientPhone);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
@@ -116,114 +119,48 @@
             this.tabPage2.Text = "Client Details";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // dataGridViewAdminSearch
             // 
-            this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(969, 433);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Delete Client";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.dataGridViewAdminSearch.AllowUserToAddRows = false;
+            this.dataGridViewAdminSearch.AllowUserToDeleteRows = false;
+            this.dataGridViewAdminSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAdminSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAdminSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdminSearch.Location = new System.Drawing.Point(6, 194);
+            this.dataGridViewAdminSearch.Name = "dataGridViewAdminSearch";
+            this.dataGridViewAdminSearch.ReadOnly = true;
+            this.dataGridViewAdminSearch.Size = new System.Drawing.Size(957, 233);
+            this.dataGridViewAdminSearch.TabIndex = 19;
             // 
-            // label1
+            // Search
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Approv Client:";
+            this.Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search.Location = new System.Drawing.Point(153, 111);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(102, 39);
+            this.Search.TabIndex = 18;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // label2
+            // textBoxAdminClientPhone
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Phone No:";
+            this.textBoxAdminClientPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAdminClientPhone.Location = new System.Drawing.Point(153, 76);
+            this.textBoxAdminClientPhone.Name = "textBoxAdminClientPhone";
+            this.textBoxAdminClientPhone.Size = new System.Drawing.Size(280, 29);
+            this.textBoxAdminClientPhone.TabIndex = 15;
             // 
-            // textBoxClientPhoneNo
+            // label3
             // 
-            this.textBoxClientPhoneNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxClientPhoneNo.Location = new System.Drawing.Point(179, 81);
-            this.textBoxClientPhoneNo.Name = "textBoxClientPhoneNo";
-            this.textBoxClientPhoneNo.Size = new System.Drawing.Size(280, 32);
-            this.textBoxClientPhoneNo.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(179, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Approv";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.client_id,
-            this.client_firstName,
-            this.client_lastName,
-            this.client_nid,
-            this.client_phoneNumber,
-            this.client_address});
-            this.dataGridView1.Location = new System.Drawing.Point(18, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(935, 230);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // client_id
-            // 
-            this.client_id.HeaderText = "ID";
-            this.client_id.Name = "client_id";
-            this.client_id.ReadOnly = true;
-            // 
-            // client_firstName
-            // 
-            this.client_firstName.HeaderText = "First Name";
-            this.client_firstName.Name = "client_firstName";
-            this.client_firstName.ReadOnly = true;
-            // 
-            // client_lastName
-            // 
-            this.client_lastName.HeaderText = "Last Name";
-            this.client_lastName.Name = "client_lastName";
-            this.client_lastName.ReadOnly = true;
-            // 
-            // client_nid
-            // 
-            this.client_nid.HeaderText = "NID No";
-            this.client_nid.Name = "client_nid";
-            this.client_nid.ReadOnly = true;
-            // 
-            // client_phoneNumber
-            // 
-            this.client_phoneNumber.HeaderText = "Phone No";
-            this.client_phoneNumber.Name = "client_phoneNumber";
-            this.client_phoneNumber.ReadOnly = true;
-            // 
-            // client_address
-            // 
-            this.client_address.HeaderText = "Address";
-            this.client_address.Name = "client_address";
-            this.client_address.ReadOnly = true;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(149, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 22);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Phone No:";
             // 
             // label4
             // 
@@ -235,154 +172,54 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Client Details:";
             // 
-            // label3
+            // tabPage3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 22);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Phone No:";
+            this.tabPage3.Controls.Add(this.dataGridViewAdminAllClient);
+            this.tabPage3.Controls.Add(this.buttonAdminDelete);
+            this.tabPage3.Controls.Add(this.textBoxAdminClient_Phone);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(969, 433);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Delete Client";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // textBox1
+            // dataGridViewAdminAllClient
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(172, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 29);
-            this.textBox1.TabIndex = 15;
+            this.dataGridViewAdminAllClient.AllowUserToAddRows = false;
+            this.dataGridViewAdminAllClient.AllowUserToDeleteRows = false;
+            this.dataGridViewAdminAllClient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewAdminAllClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAdminAllClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdminAllClient.Location = new System.Drawing.Point(6, 200);
+            this.dataGridViewAdminAllClient.Name = "dataGridViewAdminAllClient";
+            this.dataGridViewAdminAllClient.ReadOnly = true;
+            this.dataGridViewAdminAllClient.Size = new System.Drawing.Size(957, 227);
+            this.dataGridViewAdminAllClient.TabIndex = 17;
             // 
-            // dataGridViewTextBoxColumn6
+            // buttonAdminDelete
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.buttonAdminDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAdminDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAdminDelete.Location = new System.Drawing.Point(180, 134);
+            this.buttonAdminDelete.Name = "buttonAdminDelete";
+            this.buttonAdminDelete.Size = new System.Drawing.Size(92, 34);
+            this.buttonAdminDelete.TabIndex = 16;
+            this.buttonAdminDelete.Text = "Delete";
+            this.buttonAdminDelete.UseVisualStyleBackColor = true;
+            this.buttonAdminDelete.Click += new System.EventHandler(this.buttonAdminDelete_Click);
             // 
-            // dataGridViewTextBoxColumn5
+            // textBoxAdminClient_Phone
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Phone No";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "NID No";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView2.Location = new System.Drawing.Point(19, 176);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(935, 241);
-            this.dataGridView2.TabIndex = 17;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.dataGridView3.Location = new System.Drawing.Point(19, 187);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(935, 230);
-            this.dataGridView3.TabIndex = 17;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "NID No";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Phone No";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(180, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 34);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(180, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 29);
-            this.textBox2.TabIndex = 15;
+            this.textBoxAdminClient_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAdminClient_Phone.Location = new System.Drawing.Point(180, 81);
+            this.textBoxAdminClient_Phone.Name = "textBoxAdminClient_Phone";
+            this.textBoxAdminClient_Phone.Size = new System.Drawing.Size(280, 29);
+            this.textBoxAdminClient_Phone.TabIndex = 15;
             // 
             // label5
             // 
@@ -415,13 +252,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllClient)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminSearch)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminAllClient)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,38 +268,18 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBoxClientPhoneNo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_nid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_phoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_address;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAdminClientPhone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button buttonAdminDelete;
+        private System.Windows.Forms.TextBox textBoxAdminClient_Phone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.DataGridView dataGridViewAdminSearch;
+        private System.Windows.Forms.DataGridView dataGridViewAdminAllClient;
+        private System.Windows.Forms.DataGridView dataGridViewAllClient;
     }
 }

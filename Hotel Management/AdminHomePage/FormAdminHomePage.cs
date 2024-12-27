@@ -28,7 +28,6 @@ namespace Hotel_Management.AdminHomePage
             DialogResult result = MessageBox.Show("Are you want to Log Out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DialogResult.Yes == result)
             {
-                // timer1.Stop();
                 this.Hide();
                 FormAdminLogin formAdminLogin = new FormAdminLogin();
                 formAdminLogin.Show();
@@ -57,6 +56,14 @@ namespace Hotel_Management.AdminHomePage
             UserControlAdminSetting userControlAdminSetting = new UserControlAdminSetting();
             userControlAdminSetting.Dock = DockStyle.Fill;
             panel4.Controls.Add(userControlAdminSetting);
+        }
+
+        private void buttonReservation_Click(object sender, EventArgs e)
+        {
+            panel4.Controls.Clear();
+            UserControlAdminReservation userControlAdminReservation = new UserControlAdminReservation();
+            userControlAdminReservation.Dock = DockStyle.Fill;
+            panel4.Controls.Add(userControlAdminReservation);
         }
     }
 }

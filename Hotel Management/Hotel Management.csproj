@@ -52,6 +52,12 @@
     <Compile Include="Admin Control\UserControlAdminClient.Designer.cs">
       <DependentUpon>UserControlAdminClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Control\UserControlAdminReservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Control\UserControlAdminReservation.Designer.cs">
+      <DependentUpon>UserControlAdminReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Control\UserControlAdminSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,12 +120,6 @@
     <Compile Include="User Control\UserControlReservation.Designer.cs">
       <DependentUpon>UserControlReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\UserControlRoom.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\UserControlRoom.Designer.cs">
-      <DependentUpon>UserControlRoom.cs</DependentUpon>
-    </Compile>
     <Compile Include="User Control\UserControlSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Admin Control\UserControlAdminClient.resx">
       <DependentUpon>UserControlAdminClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Control\UserControlAdminReservation.resx">
+      <DependentUpon>UserControlAdminReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Control\UserControlAdminSetting.resx">
       <DependentUpon>UserControlAdminSetting.cs</DependentUpon>
@@ -168,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UserControlReservation.resx">
       <DependentUpon>UserControlReservation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Control\UserControlRoom.resx">
-      <DependentUpon>UserControlRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UserControlSetting.resx">
       <DependentUpon>UserControlSetting.cs</DependentUpon>

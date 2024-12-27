@@ -1,0 +1,11 @@
+﻿CREATE TABLE Reservation_table(
+R_Id INT IDENTITY(1,1),
+R_Name VARCHAR(30),
+R_Nid VARCHAR(20),
+R_Phone VARCHAR(20),
+R_RoomType VARCHAR(10),
+R_RoomNo VARCHAR(10),
+R_In VARCHAR(10),
+R_out VARCHAR(10),
+PRIMARY KEY(R_Id)
+);

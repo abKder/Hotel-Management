@@ -1,0 +1,9 @@
+﻿CREATE TABLE Employee_table(
+E_Id INT IDENTITY(1,1),
+E_Name VARCHAR(30),
+E_Nid VARCHAR(20),
+E_Phone VARCHAR(20),
+E_Email VARCHAR(20),
+E_Gender VARCHAR(20),
+PRIMARY KEY(E_Id)
+);
