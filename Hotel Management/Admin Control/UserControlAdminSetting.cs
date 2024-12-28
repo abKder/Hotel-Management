@@ -39,30 +39,53 @@ namespace Hotel_Management.Admin_Control
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string adminName = textBoxAdminname.Text.ToString();
-            string adminpassword = textBoxAdminpassword.Text.ToString();
-            if (string.IsNullOrEmpty(adminName) || string.IsNullOrEmpty(adminpassword))
+            string adminName = textBoxAdminname.Text.Trim();
+            string adminPassword = textBoxAdminpassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(adminName) || string.IsNullOrEmpty(adminPassword))
             {
                 MessageBox.Show("No empty fields allowed.");
+                return;
             }
-            else
+
+            using (SqlConnection conn = new SqlConnection(CONNECTION_STRING))
             {
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = CONNECTION_STRING;
                 conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "INSERT INTO Adminuser_table (Admin_Username, Admin_Userpassword) VALUES('" + adminName + "','" + adminpassword + "')";
-                cmd.Connection = conn;
-                int check = cmd.ExecuteNonQuery();
-                conn.Close();
-                if (check > 0)
+                string checkQuery = "SELECT COUNT(1) FROM Adminuser_table WHERE Admin_Username = @AdminName";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
                 {
-                    MessageBox.Show("User added successfully.");
-                    textBoxAdminname.Text = "";
-                    textBoxAdminpassword.Text = "";
+                    checkCmd.Parameters.AddWithValue("@AdminName", adminName);
+                    int userExists = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (userExists > 0)
+                    {
+                        MessageBox.Show("Username already exists. Please choose a different username.");
+                        textBoxAdminname.Text = "";
+                        textBoxAdminpassword.Text = "";
+                        return;
+                    }
+                }
+                string insertQuery = "INSERT INTO Adminuser_table (Admin_Username, Admin_Userpassword) VALUES (@AdminName, @AdminPassword)";
+                using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                {
+                    insertCmd.Parameters.AddWithValue("@AdminName", adminName);
+                    insertCmd.Parameters.AddWithValue("@AdminPassword", adminPassword);
+
+                    int check = insertCmd.ExecuteNonQuery();
+                    if (check > 0)
+                    {
+                        MessageBox.Show("User added successfully.");
+                        textBoxAdminname.Text = "";
+                        textBoxAdminpassword.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add user. Please try again.");
+                    }
                 }
             }
         }
+
 
         private void Search_Click(object sender, EventArgs e)
         {

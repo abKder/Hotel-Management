@@ -34,40 +34,75 @@ namespace Hotel_Management.User_Control
 
         private void buttonReservation_Add_Click(object sender, EventArgs e)
         {
-            string re_name = textBoxR_name.Text.ToString();
-            string re_phone = textBoxR_phone.Text.ToString();
-            string re_nid = textBoxR_nid.Text.ToString();
-            string re_roomNo = textBoxR_roomno.Text.ToString();
-            string re_roomType = textBoxR_nid.Text.ToString();
-            string re_in = textBoxR_in.Text.ToString();
-            string re_out = textBoxR_out.Text.ToString();
-            if (string.IsNullOrEmpty(re_name) || string.IsNullOrEmpty(re_phone) || string.IsNullOrEmpty(re_roomNo) || string.IsNullOrEmpty(re_roomType) || string.IsNullOrEmpty(re_in) || string.IsNullOrEmpty(re_out) || string.IsNullOrEmpty(re_in) || string.IsNullOrEmpty(re_nid))
+            string re_name = textBoxR_name.Text.Trim();
+            string re_phone = textBoxR_phone.Text.Trim();
+            string re_nid = textBoxR_nid.Text.Trim();
+            string re_roomNo = textBoxR_roomno.Text.Trim();
+            string re_roomType = textBoxR_roomtype.Text.Trim();
+            string re_in = textBoxR_in.Text.Trim();
+            string re_out = textBoxR_out.Text.Trim();
+
+            if (string.IsNullOrEmpty(re_name) || string.IsNullOrEmpty(re_phone) || string.IsNullOrEmpty(re_roomNo) || string.IsNullOrEmpty(re_roomType) || string.IsNullOrEmpty(re_in) || string.IsNullOrEmpty(re_out) || string.IsNullOrEmpty(re_nid))
             {
                 MessageBox.Show("No empty fields allowed.");
+                return;
             }
-            else
+
+            using (SqlConnection conn = new SqlConnection(CONNECTION_STRING))
             {
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = CONNECTION_STRING;
                 conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "INSERT INTO Reservation_table(R_Name, R_Nid, R_Phone, R_RoomType, R_RoomNo, R_In, R_out) VALUES('" + re_name + "','" + re_nid + "','" + re_phone + "','" + re_roomType+ "','" + re_roomNo + "','" + re_in + "','" + re_out + "')";
-                cmd.Connection = conn;
-                int check = cmd.ExecuteNonQuery();
-                conn.Close();
-                if (check > 0)
+                string checkQuery = @"
+            SELECT COUNT(1)
+            FROM Reservation_table
+            WHERE R_RoomNo = @RoomNo
+              AND (R_In <= @OutDate AND R_out >= @InDate)";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
                 {
-                    MessageBox.Show("Client added successfully.");
-                    textBoxR_name.Text = "";
-                    textBoxR_nid.Text = "";
-                    textBoxR_phone.Text = "";
-                    textBoxR_roomtype.Text = "";
-                    textBoxR_roomno.Text = "";
-                    textBoxR_in.Text = "";
-                    textBoxR_out.Text = "";
+                    checkCmd.Parameters.AddWithValue("@RoomNo", re_roomNo);
+                    checkCmd.Parameters.AddWithValue("@InDate", re_in);
+                    checkCmd.Parameters.AddWithValue("@OutDate", re_out);
+
+                    int roomExists = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (roomExists > 0)
+                    {
+                        MessageBox.Show("The room is already reserved for the selected dates. Please choose a different room.");
+                        return;
+                    }
+                }
+                string insertQuery = @"
+            INSERT INTO Reservation_table (R_Name, R_Nid, R_Phone, R_RoomType, R_RoomNo, R_In, R_out)
+            VALUES (@Name, @Nid, @Phone, @RoomType, @RoomNo, @InDate, @OutDate)";
+                using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                {
+                    insertCmd.Parameters.AddWithValue("@Name", re_name);
+                    insertCmd.Parameters.AddWithValue("@Nid", re_nid);
+                    insertCmd.Parameters.AddWithValue("@Phone", re_phone);
+                    insertCmd.Parameters.AddWithValue("@RoomType", re_roomType);
+                    insertCmd.Parameters.AddWithValue("@RoomNo", re_roomNo);
+                    insertCmd.Parameters.AddWithValue("@InDate", re_in);
+                    insertCmd.Parameters.AddWithValue("@OutDate", re_out);
+
+                    int check = insertCmd.ExecuteNonQuery();
+                    if (check > 0)
+                    {
+                        MessageBox.Show("Reservation added successfully.");
+                        textBoxR_name.Text = "";
+                        textBoxR_nid.Text = "";
+                        textBoxR_phone.Text = "";
+                        textBoxR_roomtype.Text = "";
+                        textBoxR_roomno.Text = "";
+                        textBoxR_in.Text = "";
+                        textBoxR_out.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add reservation. Please try again.");
+                    }
                 }
             }
         }
+
 
         private void Search_Click(object sender, EventArgs e)
         {

@@ -25,48 +25,81 @@ namespace Hotel_Management.User_Control
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Client_name = textBoxClientName.Text.ToString();
-            string Client_email = textBoxClientEmail.Text.ToString();
-            string Client_nid = textBoxClientNID.Text.ToString();
-            string Client_phone = textBoxClientPhone.Text.ToString();
-            string Client_roomType = textBoxClientRoomType.Text.ToString();
-            string Client_roomNo = textBoxClientRoomNo.Text.ToString();
-            string Client_in = textBoxClientIn.Text.ToString();
-            string Client_out = textBoxClientOut.Text.ToString();
-            if (String.IsNullOrEmpty(Client_name) || String.IsNullOrEmpty(Client_email) || String.IsNullOrEmpty(Client_nid) || String.IsNullOrEmpty(Client_phone) || String.IsNullOrEmpty(Client_roomType) || String.IsNullOrEmpty(Client_roomNo) || String.IsNullOrEmpty(Client_in) || String.IsNullOrEmpty(Client_out) || String.IsNullOrEmpty(Client_in))
+            string clientName = textBoxClientName.Text.Trim();
+            string clientEmail = textBoxClientEmail.Text.Trim();
+            string clientNid = textBoxClientNID.Text.Trim();
+            string clientPhone = textBoxClientPhone.Text.Trim();
+            string clientRoomType = textBoxClientRoomType.Text.Trim();
+            string clientRoomNo = textBoxClientRoomNo.Text.Trim();
+            string clientIn = textBoxClientIn.Text.Trim();
+            string clientOut = textBoxClientOut.Text.Trim();
+
+            if (string.IsNullOrEmpty(clientName) || string.IsNullOrEmpty(clientEmail) || string.IsNullOrEmpty(clientNid) || string.IsNullOrEmpty(clientPhone) || string.IsNullOrEmpty(clientRoomType) || string.IsNullOrEmpty(clientRoomNo) || string.IsNullOrEmpty(clientIn) || string.IsNullOrEmpty(clientOut))
             {
                 MessageBox.Show("No empty fields allowed.");
+                return;
             }
-            else
+
+            using (SqlConnection conn = new SqlConnection(CONNECTION_STRING))
             {
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = CONNECTION_STRING;
                 conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "INSERT INTO Client_table (Client_name, Client_email, Client_nid, Client_phone, Client_roomType, Client_roomNo, Client_in, Client_out) VALUES('"+Client_name+"','"+Client_email+"','"+Client_nid+"','"+Client_phone+ "','"+Client_roomType+ "','"+Client_roomNo+ "','"+Client_in+ "','"+Client_out+"')";
-                cmd.Connection = conn;
-               int check = cmd.ExecuteNonQuery();
-                conn.Close();
-                if (check > 0)
+                string checkQuery = @"
+            SELECT COUNT(1)
+            FROM Client_table
+            WHERE Client_roomNo = @RoomNo
+              AND (Client_in <= @OutDate AND Client_out >= @InDate)";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
                 {
-                    MessageBox.Show("Client added successfully.");
-                    textBoxClientName.Text = "";
-                    textBoxClientEmail.Text = "";
-                    textBoxClientNID.Text = "";
-                    textBoxClientPhone.Text = "";
-                    textBoxClientRoomType.Text = "";
-                    textBoxClientRoomNo.Text = "";
-                    textBoxClientIn.Text = "";
-                    textBoxClientOut.Text = "";
+                    checkCmd.Parameters.AddWithValue("@RoomNo", clientRoomNo);
+                    checkCmd.Parameters.AddWithValue("@InDate", clientIn);
+                    checkCmd.Parameters.AddWithValue("@OutDate", clientOut);
+
+                    int roomExists = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                    if (roomExists > 0)
+                    {
+                        MessageBox.Show("The room is already reserved for the selected dates. Please choose a different room.");
+                        return;
+                    }
+                }
+                string insertQuery = @"
+            INSERT INTO Client_table (Client_name, Client_email, Client_nid, Client_phone, Client_roomType, Client_roomNo, Client_in, Client_out)
+            VALUES (@Name, @Email, @Nid, @Phone, @RoomType, @RoomNo, @InDate, @OutDate)";
+                using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                {
+                    insertCmd.Parameters.AddWithValue("@Name", clientName);
+                    insertCmd.Parameters.AddWithValue("@Email", clientEmail);
+                    insertCmd.Parameters.AddWithValue("@Nid", clientNid);
+                    insertCmd.Parameters.AddWithValue("@Phone", clientPhone);
+                    insertCmd.Parameters.AddWithValue("@RoomType", clientRoomType);
+                    insertCmd.Parameters.AddWithValue("@RoomNo", clientRoomNo);
+                    insertCmd.Parameters.AddWithValue("@InDate", clientIn);
+                    insertCmd.Parameters.AddWithValue("@OutDate", clientOut);
+
+                    int check = insertCmd.ExecuteNonQuery();
+                    if (check > 0)
+                    {
+                        MessageBox.Show("Client added successfully.");
+                        textBoxClientName.Text = "";
+                        textBoxClientEmail.Text = "";
+                        textBoxClientNID.Text = "";
+                        textBoxClientPhone.Text = "";
+                        textBoxClientRoomType.Text = "";
+                        textBoxClientRoomNo.Text = "";
+                        textBoxClientIn.Text = "";
+                        textBoxClientOut.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add client. Please try again.");
+                    }
                 }
             }
         }
-
         private void tabPage3_Click(object sender, EventArgs e)
         {
             ShowClientData();
         }
-
         private void ShowClientData()
         {
             conn.ConnectionString = CONNECTION_STRING;
@@ -74,9 +107,7 @@ namespace Hotel_Management.User_Control
             dt = new DataTable();
             adpt.Fill(dt);
             dataGridViewAllClient.DataSource = dt;
-
         }
-
         private void Search_Click(object sender, EventArgs e)
         {
             conn.ConnectionString = CONNECTION_STRING;
@@ -98,8 +129,6 @@ namespace Hotel_Management.User_Control
             }
             textBoxClient_Phone.Text = "";
         }
-
-
         private void button3_Click(object sender, EventArgs e)
         {
             conn.ConnectionString = CONNECTION_STRING;
@@ -131,7 +160,5 @@ namespace Hotel_Management.User_Control
                 conn.Close();
             }
         }
-
-
     }
 }
