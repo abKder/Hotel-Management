@@ -119,7 +119,6 @@
             this.pictureBoxShow.TabIndex = 9;
             this.pictureBoxShow.TabStop = false;
             this.pictureBoxShow.Click += new System.EventHandler(this.pictureBoxShow_Click);
-           // this.pictureBoxShow.MouseHover += new System.EventHandler(this.pictureBoxShow_MouseHover);
             // 
             // pictureBoxHide
             // 
@@ -133,7 +132,6 @@
             this.pictureBoxHide.TabIndex = 8;
             this.pictureBoxHide.TabStop = false;
             this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
-            //this.pictureBoxHide.MouseHover += new System.EventHandler(this.pictureBoxHide_MouseHover);
             // 
             // buttonAdminLogin
             // 
@@ -181,6 +179,7 @@
             this.textBoxAdminName.Name = "textBoxAdminName";
             this.textBoxAdminName.Size = new System.Drawing.Size(256, 29);
             this.textBoxAdminName.TabIndex = 0;
+            this.textBoxAdminName.TextChanged += new System.EventHandler(this.textBoxAdminName_TextChanged);
             // 
             // panel2
             // 
@@ -256,6 +255,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAdminLogin";
             this.Text = "FormAdminLogin";
             this.panel1.ResumeLayout(false);

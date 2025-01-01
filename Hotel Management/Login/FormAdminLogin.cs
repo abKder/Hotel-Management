@@ -125,5 +125,10 @@ namespace Hotel_Management
             textBoxAdminPassword.UseSystemPasswordChar = true;
             pictureBoxShow.Show();
         }
+
+        private void textBoxAdminName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

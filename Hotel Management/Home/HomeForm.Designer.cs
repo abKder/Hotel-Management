@@ -299,6 +299,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeForm";
             this.Load += new System.EventHandler(this.timer1_Tick);
             this.panel2.ResumeLayout(false);

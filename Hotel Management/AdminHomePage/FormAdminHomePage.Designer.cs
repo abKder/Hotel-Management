@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonReservation = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,7 +43,6 @@
             this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonReservation = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,12 +66,27 @@
             this.panel1.Size = new System.Drawing.Size(208, 621);
             this.panel1.TabIndex = 0;
             // 
+            // buttonReservation
+            // 
+            this.buttonReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonReservation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonReservation.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReservation.ForeColor = System.Drawing.Color.Black;
+            this.buttonReservation.Location = new System.Drawing.Point(4, 319);
+            this.buttonReservation.Name = "buttonReservation";
+            this.buttonReservation.Size = new System.Drawing.Size(200, 61);
+            this.buttonReservation.TabIndex = 6;
+            this.buttonReservation.Text = "Reservation";
+            this.buttonReservation.UseVisualStyleBackColor = false;
+            this.buttonReservation.Click += new System.EventHandler(this.buttonReservation_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(57, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 24);
@@ -82,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 24);
@@ -106,7 +121,7 @@
             this.buttonSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSetting.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSetting.ForeColor = System.Drawing.Color.White;
+            this.buttonSetting.ForeColor = System.Drawing.Color.Black;
             this.buttonSetting.Location = new System.Drawing.Point(5, 386);
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(200, 61);
@@ -121,7 +136,7 @@
             this.buttonClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClient.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClient.ForeColor = System.Drawing.Color.White;
+            this.buttonClient.ForeColor = System.Drawing.Color.Black;
             this.buttonClient.Location = new System.Drawing.Point(4, 252);
             this.buttonClient.Name = "buttonClient";
             this.buttonClient.Size = new System.Drawing.Size(200, 61);
@@ -136,7 +151,7 @@
             this.buttonEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEmployee.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEmployee.ForeColor = System.Drawing.Color.White;
+            this.buttonEmployee.ForeColor = System.Drawing.Color.Black;
             this.buttonEmployee.Location = new System.Drawing.Point(4, 185);
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(200, 61);
@@ -160,7 +175,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(299, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(479, 21);
@@ -185,7 +200,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(36, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(361, 31);
@@ -224,21 +239,6 @@
             this.panel4.Size = new System.Drawing.Size(1066, 503);
             this.panel4.TabIndex = 3;
             // 
-            // buttonReservation
-            // 
-            this.buttonReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonReservation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonReservation.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReservation.ForeColor = System.Drawing.Color.White;
-            this.buttonReservation.Location = new System.Drawing.Point(4, 319);
-            this.buttonReservation.Name = "buttonReservation";
-            this.buttonReservation.Size = new System.Drawing.Size(200, 61);
-            this.buttonReservation.TabIndex = 6;
-            this.buttonReservation.Text = "Reservation";
-            this.buttonReservation.UseVisualStyleBackColor = false;
-            this.buttonReservation.Click += new System.EventHandler(this.buttonReservation_Click);
-            // 
             // FormAdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +250,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAdminHomePage";
             this.Text = "FormAdminHomePage";
             this.panel1.ResumeLayout(false);
