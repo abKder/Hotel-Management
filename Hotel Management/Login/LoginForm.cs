@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel_Management.Forgot_Password;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -82,6 +83,12 @@ namespace Hotel_Management
             this.Hide();
             FormFrontPage formFrontPage = new FormFrontPage();
             formFrontPage.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormForgotPasswordUser formForgotPasswordUser = new FormForgotPasswordUser();
+            formForgotPasswordUser.Show();
         }
     }
 }

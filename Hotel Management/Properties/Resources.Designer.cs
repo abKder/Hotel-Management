@@ -63,6 +63,16 @@ namespace Hotel_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I {
+            get {
+                object obj = ResourceManager.GetObject("1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AdminHomePage {
             get {
                 object obj = ResourceManager.GetObject("AdminHomePage", resourceCulture);
@@ -236,6 +246,27 @@ namespace Hotel_Management.Properties {
         internal static System.Drawing.Bitmap eye_open {
             get {
                 object obj = ResourceManager.GetObject("eye open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forgot_password_button_speech_bubble_banner_label_forgot_password_vector {
+            get {
+                object obj = ResourceManager.GetObject("forgot-password-button-speech-bubble-banner-label-forgot-password-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forgot_password_text_button_forgot_password_sign_icon_label_sticker_web_buttons_vector {
+            get {
+                object obj = ResourceManager.GetObject("forgot-password-text-button-forgot-password-sign-icon-label-sticker-web-buttons-v" +
+                        "ector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

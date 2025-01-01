@@ -76,6 +76,18 @@
     <Compile Include="AdminHomePage\FormAdminHomePage.Designer.cs">
       <DependentUpon>FormAdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forgot Password\FormForgotPasswordAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot Password\FormForgotPasswordAdmin.Designer.cs">
+      <DependentUpon>FormForgotPasswordAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot Password\FormForgotPasswordUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot Password\FormForgotPasswordUser.Designer.cs">
+      <DependentUpon>FormForgotPasswordUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\FormAdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHomePage\FormAdminHomePage.resx">
       <DependentUpon>FormAdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot Password\FormForgotPasswordAdmin.resx">
+      <DependentUpon>FormForgotPasswordAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgot Password\FormForgotPasswordUser.resx">
+      <DependentUpon>FormForgotPasswordUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FormAdminLogin.resx">
       <DependentUpon>FormAdminLogin.cs</DependentUpon>
@@ -370,6 +388,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UserHomePage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgot-password-text-button-forgot-password-sign-icon-label-sticker-web-buttons-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgot-password-button-speech-bubble-banner-label-forgot-password-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Hotel_Management.AdminHomePage;
+using Hotel_Management.User_Control;
+using Hotel_Management.Forgot_Password;
 
 namespace Hotel_Management
 {
@@ -55,7 +57,6 @@ namespace Hotel_Management
                 {
                     this.Hide();
                     FormAdminHomePage formAdminHomePage = new FormAdminHomePage();
-                   // formAdminHomePage.Admin_Username = textBoxAdminName.Text;
                     textBoxAdminName.Clear();
                     textBoxAdminPassword.Clear();
                     formAdminHomePage.Show();
@@ -71,6 +72,58 @@ namespace Hotel_Management
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormForgotPasswordAdmin formForgotPasswordAdmin = new FormForgotPasswordAdmin();
+            formForgotPasswordAdmin.Show();
+        }
+
+        Label tooltipLabel = new Label();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            tooltipLabel.Text = "Hide Password";
+            tooltipLabel.Visible = false;
+            tooltipLabel.BackColor = Color.LightYellow;
+            tooltipLabel.AutoSize = true;
+            tooltipLabel.BorderStyle = BorderStyle.FixedSingle;
+            this.Controls.Add(tooltipLabel);
+        }
+        private void pictureBoxHide_MouseHover(object sender, EventArgs e)
+        {
+            tooltipLabel.Location = new Point(pictureBoxHide.Right, pictureBoxHide.Top);
+            tooltipLabel.Visible = true;
+        }
+
+        private void pictureBoxHide_MouseLeave(object sender, EventArgs e)
+        {
+            tooltipLabel.Visible = false;
+        }
+
+        private void pictureBoxShow_MouseHover(object sender, EventArgs e)
+        {
+            tooltipLabel.Location = new Point(pictureBoxShow.Right, pictureBoxShow.Top);
+            tooltipLabel.Visible = true;
+        }
+
+        private void pictureBoxShow_MouseHover_1(object sender, EventArgs e)
+        {
+            tooltipLabel.Visible = false;
+        }
+
+        private void pictureBoxShow_Click(object sender, EventArgs e)
+        {
+            pictureBoxShow.Hide();
+            textBoxAdminPassword.UseSystemPasswordChar = false;
+            pictureBoxHide.Show();
+        }
+
+        private void pictureBoxHide_Click(object sender, EventArgs e)
+        {
+            pictureBoxHide.Hide();
+            textBoxAdminPassword.UseSystemPasswordChar = true;
+            pictureBoxShow.Show();
         }
     }
 }

@@ -31,7 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxShow = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHide = new System.Windows.Forms.PictureBox();
             this.buttonAdminLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxAdminPassword = new System.Windows.Forms.TextBox();
@@ -44,6 +46,8 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +77,9 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.pictureBoxShow);
+            this.groupBox1.Controls.Add(this.pictureBoxHide);
             this.groupBox1.Controls.Add(this.buttonAdminLogin);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxAdminPassword);
@@ -89,21 +95,52 @@
             this.groupBox1.Text = "Please Login First";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label3
+            // linkLabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(138, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Forgot Password?";
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(147, 225);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(161, 22);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot Password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // pictureBoxShow
+            // 
+            this.pictureBoxShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxShow.Image = global::Hotel_Management.Properties.Resources.eye_open;
+            this.pictureBoxShow.Location = new System.Drawing.Point(266, 162);
+            this.pictureBoxShow.Name = "pictureBoxShow";
+            this.pictureBoxShow.Size = new System.Drawing.Size(33, 29);
+            this.pictureBoxShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxShow.TabIndex = 9;
+            this.pictureBoxShow.TabStop = false;
+            this.pictureBoxShow.Click += new System.EventHandler(this.pictureBoxShow_Click);
+           // this.pictureBoxShow.MouseHover += new System.EventHandler(this.pictureBoxShow_MouseHover);
+            // 
+            // pictureBoxHide
+            // 
+            this.pictureBoxHide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxHide.Image = global::Hotel_Management.Properties.Resources.eye_close;
+            this.pictureBoxHide.Location = new System.Drawing.Point(266, 162);
+            this.pictureBoxHide.Name = "pictureBoxHide";
+            this.pictureBoxHide.Size = new System.Drawing.Size(33, 29);
+            this.pictureBoxHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHide.TabIndex = 8;
+            this.pictureBoxHide.TabStop = false;
+            this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
+            //this.pictureBoxHide.MouseHover += new System.EventHandler(this.pictureBoxHide_MouseHover);
             // 
             // buttonAdminLogin
             // 
             this.buttonAdminLogin.BackColor = System.Drawing.Color.Transparent;
             this.buttonAdminLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdminLogin.ForeColor = System.Drawing.Color.Black;
-            this.buttonAdminLogin.Location = new System.Drawing.Point(176, 270);
+            this.buttonAdminLogin.Location = new System.Drawing.Point(167, 268);
             this.buttonAdminLogin.Name = "buttonAdminLogin";
             this.buttonAdminLogin.Size = new System.Drawing.Size(132, 38);
             this.buttonAdminLogin.TabIndex = 4;
@@ -125,7 +162,7 @@
             // 
             this.textBoxAdminPassword.Location = new System.Drawing.Point(43, 162);
             this.textBoxAdminPassword.Name = "textBoxAdminPassword";
-            this.textBoxAdminPassword.Size = new System.Drawing.Size(256, 29);
+            this.textBoxAdminPassword.Size = new System.Drawing.Size(236, 29);
             this.textBoxAdminPassword.TabIndex = 2;
             this.textBoxAdminPassword.UseSystemPasswordChar = true;
             // 
@@ -225,6 +262,8 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,11 +280,13 @@
         private System.Windows.Forms.TextBox textBoxAdminPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAdminLogin;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.PictureBox pictureBoxHide;
+        private System.Windows.Forms.PictureBox pictureBoxShow;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
