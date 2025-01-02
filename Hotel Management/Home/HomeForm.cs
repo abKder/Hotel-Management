@@ -13,10 +13,16 @@ namespace Hotel_Management
 {
     public partial class HomeForm : Form
     {
-        public string username;
-        public HomeForm()
+        public string _username;
+        public HomeForm(string username)
         {
             InitializeComponent();
+            _username = username;
+        }
+        public string DisplayText
+        {
+            get => labelUsername.Text;
+            set => labelUsername.Text = value;
         }
         private void linkLabelLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -37,6 +43,7 @@ namespace Hotel_Management
         private void HomeForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            labelUsername.Text = $"Welcome, {_username}!";
         }
 
         private void buttonDashboard_Click(object sender, EventArgs e)
@@ -68,10 +75,11 @@ namespace Hotel_Management
         private void buttonSetting_Click(object sender, EventArgs e)
         {
             panel6.Controls.Clear();
-            UserControlSetting userControlSetting = new UserControlSetting();
+            UserControlSetting userControlSetting = new UserControlSetting(_username);
             userControlSetting.Dock = DockStyle.Fill;
             panel6.Controls.Add(userControlSetting);
 
         }
+
     }
 }

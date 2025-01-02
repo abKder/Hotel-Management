@@ -125,7 +125,7 @@ namespace Hotel_Management.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap client_icon1 {
             get {
-                object obj = ResourceManager.GetObject("client-icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("client icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -424,9 +424,19 @@ namespace Hotel_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reservation_icon4 {
+            get {
+                object obj = ResourceManager.GetObject("reservation-icon4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Room_icon {
             get {
-                object obj = ResourceManager.GetObject("Room-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("room icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

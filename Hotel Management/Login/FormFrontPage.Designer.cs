@@ -42,11 +42,11 @@
             this.button1.BackColor = System.Drawing.Color.DarkViolet;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(522, 495);
+            this.button1.Location = new System.Drawing.Point(475, 495);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 47);
+            this.button1.Size = new System.Drawing.Size(152, 47);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Admin";
+            this.button1.Text = "Supper Admin";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -56,11 +56,11 @@
             this.button2.BackColor = System.Drawing.Color.DarkViolet;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(748, 495);
+            this.button2.Location = new System.Drawing.Point(738, 495);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 47);
+            this.button2.Size = new System.Drawing.Size(135, 47);
             this.button2.TabIndex = 1;
-            this.button2.Text = "User";
+            this.button2.Text = "Admin";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

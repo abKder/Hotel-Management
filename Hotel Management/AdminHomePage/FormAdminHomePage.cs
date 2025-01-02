@@ -14,11 +14,17 @@ namespace Hotel_Management.AdminHomePage
 {
     public partial class FormAdminHomePage : Form
     {
-        public FormAdminHomePage()
+        public string _Adminusername;
+        public FormAdminHomePage(string adminusername)
         {
             InitializeComponent();
+            _Adminusername = adminusername;
         }
-
+        public string DisplayText
+        {
+            get => labelAdminname.Text;
+            set => labelAdminname.Text = value;
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -53,7 +59,7 @@ namespace Hotel_Management.AdminHomePage
         private void buttonSetting_Click(object sender, EventArgs e)
         {
             panel4.Controls.Clear();
-            UserControlAdminSetting userControlAdminSetting = new UserControlAdminSetting();
+            UserControlAdminSetting userControlAdminSetting = new UserControlAdminSetting(_Adminusername);
             userControlAdminSetting.Dock = DockStyle.Fill;
             panel4.Controls.Add(userControlAdminSetting);
         }
@@ -64,6 +70,17 @@ namespace Hotel_Management.AdminHomePage
             UserControlAdminReservation userControlAdminReservation = new UserControlAdminReservation();
             userControlAdminReservation.Dock = DockStyle.Fill;
             panel4.Controls.Add(userControlAdminReservation);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelDateTime.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss tt");
+        }
+
+        private void FormAdminHomePage_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            labelAdminname.Text = $"{_Adminusername}";
         }
     }
 }

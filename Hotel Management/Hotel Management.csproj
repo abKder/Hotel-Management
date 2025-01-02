@@ -398,5 +398,8 @@
   <ItemGroup>
     <None Include="Resources\1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservation-icon4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,13 +14,15 @@ namespace Hotel_Management.Admin_Control
 {
     public partial class UserControlAdminSetting : UserControl
     {
+        public string _Adminusername;
         private string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Md.Abdul Kader\OneDrive\Documents\DatabaseAdmin.mdf"";Integrated Security=True;Connect Timeout=30";
         SqlDataAdapter adpt;
         DataTable dt;
         SqlConnection conn = new SqlConnection();
-        public UserControlAdminSetting()
+        public UserControlAdminSetting(string adminusername)
         {
             InitializeComponent();
+            _Adminusername = adminusername;
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -113,22 +115,43 @@ namespace Hotel_Management.Admin_Control
         {
             conn.ConnectionString = CONNECTION_STRING;
             string textToSearch = textBoxAdmin_name_delete.Text.Trim();
+            string currentAdminname = _Adminusername;
+
+            if (string.IsNullOrEmpty(textToSearch))
+            {
+                MessageBox.Show("Please enter a username to delete.");
+                return;
+            }
+
+            if (textToSearch.Equals(currentAdminname, StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("You cannot delete your own account.");
+                textBoxAdmin_name_delete.Text = "";
+                return;
+            }
 
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM Adminuser_table WHERE Admin_Username = @user", conn);
+                SqlCommand cmd = new SqlCommand(
+                    "DELETE FROM Adminuser_table WHERE Admin_Username = @user AND Admin_Username != @currentAdmin", conn);
                 cmd.Parameters.AddWithValue("@user", textToSearch);
+                cmd.Parameters.AddWithValue("@currentAdmin", currentAdminname);
+
                 int rowsAffected = cmd.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
                 {
-                    SqlDataAdapter adpt = new SqlDataAdapter("SELECT * FROM Adminuser_table", conn);
+                    SqlDataAdapter adpt = new SqlDataAdapter("SELECT * FROM Admin_Username", conn);
                     DataTable dt = new DataTable();
                     adpt.Fill(dt);
                     dataGridViewAfterdelete.DataSource = dt;
-                    MessageBox.Show($"{rowsAffected}deleted successfully.");
+                    MessageBox.Show($"{rowsAffected} Supper Admin(s) deleted successfully.");
                     textBoxAdmin_name_delete.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("No matching Supper Admin found, or you cannot delete this user.");
                 }
             }
             catch (Exception ex)

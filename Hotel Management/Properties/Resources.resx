@@ -130,6 +130,9 @@
   <data name="Room_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home icon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Room-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,20 +172,14 @@
   <data name="reservation icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reservation icon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="client icon11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\client icon11.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reservation-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reservation-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="client icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\client icon1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdminPanelPhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdminPanelPhoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hotel-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hotel-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eye open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye open.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,8 +187,8 @@
   <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="client-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\client-icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard icone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard icone1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="client-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client-icon2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +196,20 @@
   <data name="Room_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room_icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hotel pic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hotel pic1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hotel pic2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotel pic2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Room_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Room_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="room icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\room icon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="setting_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\setting_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Room-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Room-icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminPanelPhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminPanelPhoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AdminHomePage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdminHomePage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,23 +217,20 @@
   <data name="dashboard icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard icone.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hotel pic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hotel pic1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="client icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client icon1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="client icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\client icon4.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye open.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="forgot-password-text-button-forgot-password-sign-icon-label-sticker-web-buttons-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forgot-password-text-button-forgot-password-sign-icon-label-sticker-web-buttons-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard icone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard icone1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="client icon11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client icon11.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="client-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forgot-password-button-speech-bubble-banner-label-forgot-password-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forgot-password-button-speech-bubble-banner-label-forgot-password-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +238,11 @@
   <data name="hotel pic21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotel pic21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home icon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="client-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client-icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard icone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard icone2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +253,8 @@
   <data name="reception image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reception image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="forgot-password-button-speech-bubble-banner-label-forgot-password-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forgot-password-button-speech-bubble-banner-label-forgot-password-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="room icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\room icon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="client-icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client-icon3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,14 +271,14 @@
   <data name="client_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eye close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye close.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Room_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Room_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reservation-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reservation-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reservation icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reservation icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,8 +286,8 @@
   <data name="setting_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hotel-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hotel-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forgot-password-text-button-forgot-password-sign-icon-label-sticker-web-buttons-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forgot-password-text-button-forgot-password-sign-icon-label-sticker-web-buttons-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="client icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client icon2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,19 +295,22 @@
   <data name="setting_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Room-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Room-icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="UserHomePage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserHomePage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Room_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setting_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setting_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="client-icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client-icon4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="client icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client icon4.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1000_F_32860380_D3xWokPxkifl3WRqgS4TNALEuhLnEq1I.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reservation-icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reservation-icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

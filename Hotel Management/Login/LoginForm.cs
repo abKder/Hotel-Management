@@ -1,4 +1,5 @@
 ﻿using Hotel_Management.Forgot_Password;
+using Hotel_Management.User_Control;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,8 +65,8 @@ namespace Hotel_Management
                 if (reader.HasRows)
                 {
                     this.Hide();
-                    HomeForm homeForm = new HomeForm();
-                    homeForm.username = textBoxUsername.Text;
+                    HomeForm homeForm = new HomeForm(username.ToString());
+                    homeForm.DisplayText = username;
                     textBoxUsername.Clear();
                     textBoxPassword.Clear();
                     homeForm.Show();

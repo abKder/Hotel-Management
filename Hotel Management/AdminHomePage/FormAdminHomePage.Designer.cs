@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonReservation = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,10 +40,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelAdminname = new System.Windows.Forms.Label();
+            this.labelDateTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -186,6 +190,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.labelAdminname);
+            this.panel3.Controls.Add(this.labelDateTime);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.linkLabelLogout);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -195,17 +201,37 @@
             this.panel3.Size = new System.Drawing.Size(1083, 69);
             this.panel3.TabIndex = 2;
             // 
+            // labelAdminname
+            // 
+            this.labelAdminname.AutoSize = true;
+            this.labelAdminname.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAdminname.Location = new System.Drawing.Point(172, 39);
+            this.labelAdminname.Name = "labelAdminname";
+            this.labelAdminname.Size = new System.Drawing.Size(24, 26);
+            this.labelAdminname.TabIndex = 4;
+            this.labelAdminname.Text = "?";
+            // 
+            // labelDateTime
+            // 
+            this.labelDateTime.AutoSize = true;
+            this.labelDateTime.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateTime.Location = new System.Drawing.Point(38, 9);
+            this.labelDateTime.Name = "labelDateTime";
+            this.labelDateTime.Size = new System.Drawing.Size(20, 22);
+            this.labelDateTime.TabIndex = 3;
+            this.labelDateTime.Text = "?";
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(36, 22);
+            this.label3.Location = new System.Drawing.Point(36, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(361, 31);
+            this.label3.Size = new System.Drawing.Size(130, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome To Hotel FLORIDA";
+            this.label3.Text = "Welcome:";
             // 
             // linkLabelLogout
             // 
@@ -239,6 +265,10 @@
             this.panel4.Size = new System.Drawing.Size(1066, 503);
             this.panel4.TabIndex = 3;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormAdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +283,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAdminHomePage";
             this.Text = "FormAdminHomePage";
+            this.Load += new System.EventHandler(this.FormAdminHomePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -282,5 +313,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonReservation;
+        private System.Windows.Forms.Label labelDateTime;
+        private System.Windows.Forms.Label labelAdminname;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -56,7 +56,8 @@ namespace Hotel_Management
                 if (reader.HasRows)
                 {
                     this.Hide();
-                    FormAdminHomePage formAdminHomePage = new FormAdminHomePage();
+                    FormAdminHomePage formAdminHomePage = new FormAdminHomePage(AdminUsername.ToString());
+                    formAdminHomePage.DisplayText = AdminUsername;
                     textBoxAdminName.Clear();
                     textBoxAdminPassword.Clear();
                     formAdminHomePage.Show();

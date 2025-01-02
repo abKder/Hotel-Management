@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelUsername = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
@@ -80,6 +81,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.labelUsername);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.labelDateTime);
             this.panel4.Controls.Add(this.linkLabelLogOut);
@@ -90,17 +92,30 @@
             this.panel4.Size = new System.Drawing.Size(1058, 95);
             this.panel4.TabIndex = 0;
             // 
+            // labelUsername
+            // 
+            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.BackColor = System.Drawing.Color.Transparent;
+            this.labelUsername.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.ForeColor = System.Drawing.Color.White;
+            this.labelUsername.Location = new System.Drawing.Point(134, 42);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(24, 26);
+            this.labelUsername.TabIndex = 4;
+            this.labelUsername.Text = "?";
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 38);
+            this.label3.Location = new System.Drawing.Point(15, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(346, 29);
+            this.label3.Size = new System.Drawing.Size(113, 26);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome To Hotel FLORIDA";
+            this.label3.Text = "Welcome:";
             // 
             // labelDateTime
             // 
@@ -108,7 +123,7 @@
             this.labelDateTime.AutoSize = true;
             this.labelDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateTime.ForeColor = System.Drawing.Color.White;
-            this.labelDateTime.Location = new System.Drawing.Point(63, 12);
+            this.labelDateTime.Location = new System.Drawing.Point(47, 12);
             this.labelDateTime.Name = "labelDateTime";
             this.labelDateTime.Size = new System.Drawing.Size(15, 16);
             this.labelDateTime.TabIndex = 0;
@@ -335,5 +350,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelUsername;
+
     }
 }

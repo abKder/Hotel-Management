@@ -13,13 +13,16 @@ namespace Hotel_Management.User_Control
 {
     public partial class UserControlSetting : UserControl
     {
+        public string _username;
         private string CONNECTION_STRING = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Project SDP2\DatabaseUser\UserDatabase.mdf"";Integrated Security=True;Connect Timeout=30";
         SqlDataAdapter adpt;
         DataTable dt;
         SqlConnection conn = new SqlConnection();
-        public UserControlSetting()
+
+        public UserControlSetting(string usernam)
         {
             InitializeComponent();
+            _username = usernam;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,12 +115,29 @@ namespace Hotel_Management.User_Control
         {
             conn.ConnectionString = CONNECTION_STRING;
             string textToSearch = textBoxDeleteUser.Text.Trim();
+            string currentUsername = _username;
+
+            if (string.IsNullOrEmpty(textToSearch))
+            {
+                MessageBox.Show("Please enter a username to delete.");
+                return;
+            }
+
+            if (textToSearch.Equals(currentUsername, StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("You cannot delete your own account.");
+                textBoxDeleteUser.Text = "";
+                return;
+            }
 
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM user_table WHERE username = @user", conn);
+                SqlCommand cmd = new SqlCommand(
+                    "DELETE FROM user_table WHERE username = @user AND username != @currentUser", conn);
                 cmd.Parameters.AddWithValue("@user", textToSearch);
+                cmd.Parameters.AddWithValue("@currentUser", currentUsername);
+
                 int rowsAffected = cmd.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
@@ -126,8 +146,12 @@ namespace Hotel_Management.User_Control
                     DataTable dt = new DataTable();
                     adpt.Fill(dt);
                     dataGridViewAllUserdata.DataSource = dt;
-                    MessageBox.Show($"{rowsAffected}deleted successfully.");
+                    MessageBox.Show($"{rowsAffected} user(s) deleted successfully.");
                     textBoxDeleteUser.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("No matching user found, or you cannot delete this user.");
                 }
             }
             catch (Exception ex)
@@ -139,5 +163,7 @@ namespace Hotel_Management.User_Control
                 conn.Close();
             }
         }
+
+       
     }
 }

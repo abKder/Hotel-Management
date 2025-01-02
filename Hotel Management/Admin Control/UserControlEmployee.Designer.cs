@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBoxEmployeGender = new System.Windows.Forms.TextBox();
             this.buttonEmployeeAdd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxEmployeeEmailID = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewEmployeeSearch = new System.Windows.Forms.DataGridView();
             this.textBoxEmployeePhnoneNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBoxEmployeGender = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -101,6 +101,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Employee";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxEmployeGender
+            // 
+            this.textBoxEmployeGender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEmployeGender.Location = new System.Drawing.Point(180, 280);
+            this.textBoxEmployeGender.Name = "textBoxEmployeGender";
+            this.textBoxEmployeGender.Size = new System.Drawing.Size(330, 32);
+            this.textBoxEmployeGender.TabIndex = 12;
             // 
             // buttonEmployeeAdd
             // 
@@ -220,6 +228,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee Details";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(191, 122);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(93, 39);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridViewEmployeeSearch
             // 
@@ -344,26 +364,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // textBoxEmployeGender
-            // 
-            this.textBoxEmployeGender.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEmployeGender.Location = new System.Drawing.Point(180, 280);
-            this.textBoxEmployeGender.Name = "textBoxEmployeGender";
-            this.textBoxEmployeGender.Size = new System.Drawing.Size(330, 32);
-            this.textBoxEmployeGender.TabIndex = 12;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(191, 122);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 39);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // UserControlEmployee
             // 
