@@ -28,7 +28,7 @@ namespace Hotel_Management.Admin_Control
             string E_phone = textBoxEmployeePhoneNo.Text.ToString();
             string E_nid = textBoxEmployeeNIDNo.Text.ToString();
             string E_email = textBoxEmployeeEmailID.Text.ToString();
-            string E_gender = textBoxEmployeGender.Text.ToString();
+            string E_gender = comboGender.SelectedIndex.ToString();
             if (string.IsNullOrEmpty(E_name) || string.IsNullOrEmpty(E_phone) || string.IsNullOrEmpty(E_nid) || string.IsNullOrEmpty(E_email) || string.IsNullOrEmpty(E_gender))
             {
                 MessageBox.Show("No empty fields allowed.");
@@ -50,7 +50,7 @@ namespace Hotel_Management.Admin_Control
                     textBoxEmployeeEmailID.Text = "";
                     textBoxEmployeeNIDNo.Text = "";
                     textBoxEmployeeName.Text = "";
-                    textBoxEmployeGender.Text = "";
+                    comboGender.SelectedIndex = 0;
                 }
             }
         }

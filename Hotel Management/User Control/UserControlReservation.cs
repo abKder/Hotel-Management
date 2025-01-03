@@ -37,8 +37,8 @@ namespace Hotel_Management.User_Control
             string re_name = textBoxR_name.Text.Trim();
             string re_phone = textBoxR_phone.Text.Trim();
             string re_nid = textBoxR_nid.Text.Trim();
-            string re_roomNo = textBoxR_roomno.Text.Trim();
-            string re_roomType = textBoxR_roomtype.Text.Trim();
+            string re_roomNo = comboBoxRoomNo.SelectedIndex.ToString();
+            string re_roomType = comboBoxRoomType.SelectedIndex.ToString();
             string re_in = textBoxR_in.Text.Trim();
             string re_out = textBoxR_out.Text.Trim();
 
@@ -90,8 +90,8 @@ namespace Hotel_Management.User_Control
                         textBoxR_name.Text = "";
                         textBoxR_nid.Text = "";
                         textBoxR_phone.Text = "";
-                        textBoxR_roomtype.Text = "";
-                        textBoxR_roomno.Text = "";
+                        comboBoxRoomType.SelectedIndex = 0;
+                        comboBoxRoomNo.SelectedIndex = 0;
                         textBoxR_in.Text = "";
                         textBoxR_out.Text = "";
                     }

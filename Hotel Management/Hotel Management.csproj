@@ -76,6 +76,12 @@
     <Compile Include="AdminHomePage\FormAdminHomePage.Designer.cs">
       <DependentUpon>FormAdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Create admin account\FormCreateAdminAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create admin account\FormCreateAdminAccount.Designer.cs">
+      <DependentUpon>FormCreateAdminAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forgot Password\FormForgotPasswordAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHomePage\FormAdminHomePage.resx">
       <DependentUpon>FormAdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create admin account\FormCreateAdminAccount.resx">
+      <DependentUpon>FormCreateAdminAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forgot Password\FormForgotPasswordAdmin.resx">
       <DependentUpon>FormForgotPasswordAdmin.cs</DependentUpon>

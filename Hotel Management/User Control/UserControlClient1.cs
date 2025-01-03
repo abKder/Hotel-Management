@@ -25,16 +25,16 @@ namespace Hotel_Management.User_Control
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string clientroomType = comboBoxRoomType.SelectedItem.ToString();
+            string clientroomNo = comboBoxRoomNo.SelectedItem.ToString();
             string clientName = textBoxClientName.Text.Trim();
             string clientEmail = textBoxClientEmail.Text.Trim();
             string clientNid = textBoxClientNID.Text.Trim();
             string clientPhone = textBoxClientPhone.Text.Trim();
-            string clientRoomType = textBoxClientRoomType.Text.Trim();
-            string clientRoomNo = textBoxClientRoomNo.Text.Trim();
             string clientIn = textBoxClientIn.Text.Trim();
             string clientOut = textBoxClientOut.Text.Trim();
 
-            if (string.IsNullOrEmpty(clientName) || string.IsNullOrEmpty(clientEmail) || string.IsNullOrEmpty(clientNid) || string.IsNullOrEmpty(clientPhone) || string.IsNullOrEmpty(clientRoomType) || string.IsNullOrEmpty(clientRoomNo) || string.IsNullOrEmpty(clientIn) || string.IsNullOrEmpty(clientOut))
+            if (string.IsNullOrEmpty(clientName) || string.IsNullOrEmpty(clientEmail) || string.IsNullOrEmpty(clientNid) || string.IsNullOrEmpty(clientPhone) || string.IsNullOrEmpty(clientroomNo) || string.IsNullOrEmpty(clientIn) || string.IsNullOrEmpty(clientOut) || string.IsNullOrEmpty(clientroomType))
             {
                 MessageBox.Show("No empty fields allowed.");
                 return;
@@ -50,7 +50,7 @@ namespace Hotel_Management.User_Control
               AND (Client_in <= @OutDate AND Client_out >= @InDate)";
                 using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
                 {
-                    checkCmd.Parameters.AddWithValue("@RoomNo", clientRoomNo);
+                    checkCmd.Parameters.AddWithValue("@RoomNo", clientroomNo);
                     checkCmd.Parameters.AddWithValue("@InDate", clientIn);
                     checkCmd.Parameters.AddWithValue("@OutDate", clientOut);
 
@@ -71,8 +71,8 @@ namespace Hotel_Management.User_Control
                     insertCmd.Parameters.AddWithValue("@Email", clientEmail);
                     insertCmd.Parameters.AddWithValue("@Nid", clientNid);
                     insertCmd.Parameters.AddWithValue("@Phone", clientPhone);
-                    insertCmd.Parameters.AddWithValue("@RoomType", clientRoomType);
-                    insertCmd.Parameters.AddWithValue("@RoomNo", clientRoomNo);
+                    insertCmd.Parameters.AddWithValue("@RoomType", clientroomType);
+                    insertCmd.Parameters.AddWithValue("@RoomNo", clientroomNo);
                     insertCmd.Parameters.AddWithValue("@InDate", clientIn);
                     insertCmd.Parameters.AddWithValue("@OutDate", clientOut);
 
@@ -84,8 +84,8 @@ namespace Hotel_Management.User_Control
                         textBoxClientEmail.Text = "";
                         textBoxClientNID.Text = "";
                         textBoxClientPhone.Text = "";
-                        textBoxClientRoomType.Text = "";
-                        textBoxClientRoomNo.Text = "";
+                        comboBoxRoomType.SelectedIndex = 0;
+                        comboBoxRoomNo.SelectedIndex = 0;
                         textBoxClientIn.Text = "";
                         textBoxClientOut.Text = "";
                     }

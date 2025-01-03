@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBoxR_roomtype = new System.Windows.Forms.TextBox();
+            this.comboBoxRoomNo = new System.Windows.Forms.ComboBox();
+            this.comboBoxRoomType = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxR_phone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxR_out = new System.Windows.Forms.TextBox();
             this.textBoxR_in = new System.Windows.Forms.TextBox();
             this.textBoxR_nid = new System.Windows.Forms.TextBox();
-            this.textBoxR_roomno = new System.Windows.Forms.TextBox();
             this.textBoxR_name = new System.Windows.Forms.TextBox();
             this.buttonReservation_Add = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,14 +84,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBoxR_roomtype);
+            this.tabPage1.Controls.Add(this.comboBoxRoomNo);
+            this.tabPage1.Controls.Add(this.comboBoxRoomType);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.textBoxR_phone);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.textBoxR_out);
             this.tabPage1.Controls.Add(this.textBoxR_in);
             this.tabPage1.Controls.Add(this.textBoxR_nid);
-            this.tabPage1.Controls.Add(this.textBoxR_roomno);
             this.tabPage1.Controls.Add(this.textBoxR_name);
             this.tabPage1.Controls.Add(this.buttonReservation_Add);
             this.tabPage1.Controls.Add(this.label8);
@@ -108,13 +108,37 @@
             this.tabPage1.Text = "Add Reservation";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBoxR_roomtype
+            // comboBoxRoomNo
             // 
-            this.textBoxR_roomtype.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxR_roomtype.Location = new System.Drawing.Point(155, 247);
-            this.textBoxR_roomtype.Name = "textBoxR_roomtype";
-            this.textBoxR_roomtype.Size = new System.Drawing.Size(265, 29);
-            this.textBoxR_roomtype.TabIndex = 15;
+            this.comboBoxRoomNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRoomNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxRoomNo.FormattingEnabled = true;
+            this.comboBoxRoomNo.Items.AddRange(new object[] {
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107"});
+            this.comboBoxRoomNo.Location = new System.Drawing.Point(155, 314);
+            this.comboBoxRoomNo.Name = "comboBoxRoomNo";
+            this.comboBoxRoomNo.Size = new System.Drawing.Size(265, 30);
+            this.comboBoxRoomNo.TabIndex = 27;
+            // 
+            // comboBoxRoomType
+            // 
+            this.comboBoxRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRoomType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxRoomType.FormattingEnabled = true;
+            this.comboBoxRoomType.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Family"});
+            this.comboBoxRoomType.Location = new System.Drawing.Point(155, 247);
+            this.comboBoxRoomType.Name = "comboBoxRoomType";
+            this.comboBoxRoomType.Size = new System.Drawing.Size(265, 30);
+            this.comboBoxRoomType.TabIndex = 26;
             // 
             // label11
             // 
@@ -170,14 +194,6 @@
             this.textBoxR_nid.Size = new System.Drawing.Size(265, 29);
             this.textBoxR_nid.TabIndex = 9;
             // 
-            // textBoxR_roomno
-            // 
-            this.textBoxR_roomno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxR_roomno.Location = new System.Drawing.Point(155, 314);
-            this.textBoxR_roomno.Name = "textBoxR_roomno";
-            this.textBoxR_roomno.Size = new System.Drawing.Size(265, 29);
-            this.textBoxR_roomno.TabIndex = 8;
-            // 
             // textBoxR_name
             // 
             this.textBoxR_name.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -205,9 +221,9 @@
             this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(485, 220);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 24);
+            this.label8.Size = new System.Drawing.Size(113, 24);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Out:";
+            this.label8.Text = "Check Out:";
             // 
             // label7
             // 
@@ -216,9 +232,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(485, 151);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 24);
+            this.label7.Size = new System.Drawing.Size(97, 24);
             this.label7.TabIndex = 4;
-            this.label7.Text = "In:";
+            this.label7.Text = "Check In:";
             // 
             // label6
             // 
@@ -455,12 +471,12 @@
         private System.Windows.Forms.TextBox textBoxR_out;
         private System.Windows.Forms.TextBox textBoxR_in;
         private System.Windows.Forms.TextBox textBoxR_nid;
-        private System.Windows.Forms.TextBox textBoxR_roomno;
         private System.Windows.Forms.TextBox textBoxR_name;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBoxR_phone;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxR_roomtype;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxRoomType;
+        private System.Windows.Forms.ComboBox comboBoxRoomNo;
     }
 }

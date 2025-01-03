@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBoxEmployeGender = new System.Windows.Forms.TextBox();
             this.buttonEmployeeAdd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxEmployeeEmailID = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.comboGender = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBoxEmployeGender);
+            this.tabPage1.Controls.Add(this.comboGender);
             this.tabPage1.Controls.Add(this.buttonEmployeeAdd);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.textBoxEmployeeEmailID);
@@ -101,14 +101,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Employee";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBoxEmployeGender
-            // 
-            this.textBoxEmployeGender.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEmployeGender.Location = new System.Drawing.Point(180, 280);
-            this.textBoxEmployeGender.Name = "textBoxEmployeGender";
-            this.textBoxEmployeGender.Size = new System.Drawing.Size(330, 32);
-            this.textBoxEmployeGender.TabIndex = 12;
             // 
             // buttonEmployeeAdd
             // 
@@ -365,6 +357,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // comboGender
+            // 
+            this.comboGender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboGender.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboGender.FormattingEnabled = true;
+            this.comboGender.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.comboGender.Location = new System.Drawing.Point(180, 280);
+            this.comboGender.Name = "comboGender";
+            this.comboGender.Size = new System.Drawing.Size(330, 32);
+            this.comboGender.TabIndex = 28;
+            // 
             // UserControlEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,7 +419,7 @@
         private System.Windows.Forms.TextBox textBoxEmployeePhone;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxEmployeGender;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboGender;
     }
 }

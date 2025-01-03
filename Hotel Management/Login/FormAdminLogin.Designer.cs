@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.linkLabelCreateAdminAccount = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -77,6 +78,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.linkLabelCreateAdminAccount);
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.pictureBoxShow);
             this.groupBox1.Controls.Add(this.pictureBoxHide);
@@ -87,9 +89,9 @@
             this.groupBox1.Controls.Add(this.textBoxAdminName);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(262, 142);
+            this.groupBox1.Location = new System.Drawing.Point(261, 122);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 328);
+            this.groupBox1.Size = new System.Drawing.Size(359, 375);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Please Login First";
@@ -239,6 +241,20 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // linkLabelCreateAdminAccount
+            // 
+            this.linkLabelCreateAdminAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabelCreateAdminAccount.AutoSize = true;
+            this.linkLabelCreateAdminAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabelCreateAdminAccount.LinkColor = System.Drawing.Color.White;
+            this.linkLabelCreateAdminAccount.Location = new System.Drawing.Point(53, 330);
+            this.linkLabelCreateAdminAccount.Name = "linkLabelCreateAdminAccount";
+            this.linkLabelCreateAdminAccount.Size = new System.Drawing.Size(250, 22);
+            this.linkLabelCreateAdminAccount.TabIndex = 11;
+            this.linkLabelCreateAdminAccount.TabStop = true;
+            this.linkLabelCreateAdminAccount.Text = "Create supper admin account";
+            this.linkLabelCreateAdminAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCreateAdminAccount_LinkClicked);
+            // 
             // FormAdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,5 +304,6 @@
         private System.Windows.Forms.PictureBox pictureBoxHide;
         private System.Windows.Forms.PictureBox pictureBoxShow;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelCreateAdminAccount;
     }
 }

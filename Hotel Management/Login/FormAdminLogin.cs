@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Hotel_Management.AdminHomePage;
 using Hotel_Management.User_Control;
 using Hotel_Management.Forgot_Password;
+using Hotel_Management.Create_admin_account;
 
 namespace Hotel_Management
 {
@@ -130,6 +131,12 @@ namespace Hotel_Management
         private void textBoxAdminName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabelCreateAdminAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormCreateAdminAccount formCreateAdminAccount = new FormCreateAdminAccount();
+            formCreateAdminAccount.Show();
         }
     }
 }

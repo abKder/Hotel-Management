@@ -32,8 +32,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBoxClientOut = new System.Windows.Forms.TextBox();
             this.textBoxClientIn = new System.Windows.Forms.TextBox();
-            this.textBoxClientRoomNo = new System.Windows.Forms.TextBox();
-            this.textBoxClientRoomType = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -60,6 +58,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxRoomType = new System.Windows.Forms.ComboBox();
+            this.comboBoxRoomNo = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,10 +84,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBoxRoomNo);
+            this.tabPage1.Controls.Add(this.comboBoxRoomType);
             this.tabPage1.Controls.Add(this.textBoxClientOut);
             this.tabPage1.Controls.Add(this.textBoxClientIn);
-            this.tabPage1.Controls.Add(this.textBoxClientRoomNo);
-            this.tabPage1.Controls.Add(this.textBoxClientRoomType);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label11);
@@ -126,22 +126,6 @@
             this.textBoxClientIn.Size = new System.Drawing.Size(325, 29);
             this.textBoxClientIn.TabIndex = 23;
             // 
-            // textBoxClientRoomNo
-            // 
-            this.textBoxClientRoomNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxClientRoomNo.Location = new System.Drawing.Point(93, 293);
-            this.textBoxClientRoomNo.Name = "textBoxClientRoomNo";
-            this.textBoxClientRoomNo.Size = new System.Drawing.Size(325, 29);
-            this.textBoxClientRoomNo.TabIndex = 22;
-            // 
-            // textBoxClientRoomType
-            // 
-            this.textBoxClientRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxClientRoomType.Location = new System.Drawing.Point(93, 210);
-            this.textBoxClientRoomType.Name = "textBoxClientRoomType";
-            this.textBoxClientRoomType.Size = new System.Drawing.Size(325, 29);
-            this.textBoxClientRoomType.TabIndex = 21;
-            // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -160,9 +144,9 @@
             this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(452, 254);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 24);
+            this.label10.Size = new System.Drawing.Size(113, 24);
             this.label10.TabIndex = 17;
-            this.label10.Text = "Out:";
+            this.label10.Text = "Check Out:";
             // 
             // label11
             // 
@@ -171,9 +155,9 @@
             this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(452, 183);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 24);
+            this.label11.Size = new System.Drawing.Size(97, 24);
             this.label11.TabIndex = 16;
-            this.label11.Text = "In:";
+            this.label11.Text = "Check In:";
             // 
             // label6
             // 
@@ -414,6 +398,38 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "Delete Client:";
             // 
+            // comboBoxRoomType
+            // 
+            this.comboBoxRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRoomType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxRoomType.FormattingEnabled = true;
+            this.comboBoxRoomType.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Family"});
+            this.comboBoxRoomType.Location = new System.Drawing.Point(93, 210);
+            this.comboBoxRoomType.Name = "comboBoxRoomType";
+            this.comboBoxRoomType.Size = new System.Drawing.Size(325, 30);
+            this.comboBoxRoomType.TabIndex = 25;
+            // 
+            // comboBoxRoomNo
+            // 
+            this.comboBoxRoomNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRoomNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxRoomNo.FormattingEnabled = true;
+            this.comboBoxRoomNo.Items.AddRange(new object[] {
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107"});
+            this.comboBoxRoomNo.Location = new System.Drawing.Point(93, 292);
+            this.comboBoxRoomNo.Name = "comboBoxRoomNo";
+            this.comboBoxRoomNo.Size = new System.Drawing.Size(325, 30);
+            this.comboBoxRoomNo.TabIndex = 26;
+            // 
             // UserControlClient1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,7 +483,7 @@
         private System.Windows.Forms.DataGridView dataGridViewAllClient;
         private System.Windows.Forms.TextBox textBoxClientOut;
         private System.Windows.Forms.TextBox textBoxClientIn;
-        private System.Windows.Forms.TextBox textBoxClientRoomNo;
-        private System.Windows.Forms.TextBox textBoxClientRoomType;
+        private System.Windows.Forms.ComboBox comboBoxRoomType;
+        private System.Windows.Forms.ComboBox comboBoxRoomNo;
     }
 }
